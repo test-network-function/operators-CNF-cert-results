@@ -1,0 +1,908 @@
+time="2023-09-25T19:49:12Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T19:49:12Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 19:49:12.552][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 19:49:12.553][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 19:49:12.553][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 19:49:12.553][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 19:49:12.553][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 19:49:12.554][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 19:49:13.038][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 19:49:13.045][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 19:49:13.132][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 19:49:13.133][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 19:49:13.133][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 19:49:13.133][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 19:49:13.261][autodiscover_operators.go: 144] Found 4 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 19:49:13.261][autodiscover_operators.go: 146]  Subscriptions name: advanced-cluster-management-v2-8-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:13.261][autodiscover_operators.go: 146]  Subscriptions name: devworkspace-operator-fast-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:13.261][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:13.261][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:15.376][autodiscover_operators.go: 121] Found 245 CSVs:                              
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: default) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: default) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: default) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 19:49:15.377][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-public) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-system) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.378][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 19:49:15.379][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 19:49:15.380][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.381][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 19:49:15.382][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.383][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.384][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 19:49:15.385][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.386][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 19:49:15.387][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 19:49:15.388][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: advanced-cluster-management.v2.8.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:15.389][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:15.390][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:15.390][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:15.390][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 19:49:15.390][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 19:49:15.390][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 19:49:17.425][autodiscover_operators.go: 91] Found 4 CSVs:                                
+[36mINFO   [0m[Sep 25 19:49:17.425][autodiscover_operators.go: 93]  CSV name: advanced-cluster-management.v2.8.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.425][autodiscover_operators.go: 93]  CSV name: devworkspace-operator.v0.22.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.425][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.425][autodiscover_operators.go: 93]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.487][autodiscover_operators.go: 144] Found 4 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 19:49:17.487][autodiscover_operators.go: 146]  Subscriptions name: advanced-cluster-management-v2-8-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.487][autodiscover_operators.go: 146]  Subscriptions name: devworkspace-operator-fast-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.487][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.487][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:17.622][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 19:49:17.739][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 19:49:17.777][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 19:49:17.777][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 19:49:18.102][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 19:49:18.286][operators.go: 130] Found 5 unique CSVs                          
+[36mINFO   [0m[Sep 25 19:49:18.287][operators.go: 132]   CSV: devworkspace-operator.v0.22.0         
+[36mINFO   [0m[Sep 25 19:49:18.287][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 19:49:18.287][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 19:49:18.287][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 19:49:18.287][operators.go: 132]   CSV: advanced-cluster-management.v2.8.0    
+[36mINFO   [0m[Sep 25 19:49:18.325][operators.go: 185] Getting installplans for op advanced-cluster-management.v2.8.0 (subs advanced-cluster-management-v2-8-0-sub ns test) 
+[36mINFO   [0m[Sep 25 19:49:18.366][operators.go: 185] Getting installplans for op devworkspace-operator.v0.22.0 (subs devworkspace-operator-fast-redhat-operators-openshift-marketplace ns test) 
+[36mINFO   [0m[Sep 25 19:49:18.407][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Sep 25 19:49:18.408][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:18.409][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 19:49:18.451][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 19:49:18.455][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 19:49:18.560][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 19:49:18.634][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 19:49:18.703][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 19:49:18.769][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 19:49:18.831][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 19:49:18.899][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.899][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.900][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.900][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.900][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.900][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.902][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.902][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.902][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.902][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.903][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.903][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 19:49:18.908][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:18.909][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:18.909][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:18.909][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:18.909][provider.go: 341] container: extract pod: a2e792197f4b1a32adc91e0fb273bf66108686d5ba2cf8489d1336c41acpwqp ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:18.910][provider.go: 357] container: extract pod: a2e792197f4b1a32adc91e0fb273bf66108686d5ba2cf8489d1336c41acpwqp ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:18.910][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:18.910][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 19:49:18.910][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.910][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.911][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.911][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.911][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.911][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.912][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.912][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.912][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.912][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.912][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:18.912][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 19:49:18.914][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:18.914][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:18.914][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:18.914][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 19:49:18.916][operators.go: 130] Found 4 unique CSVs                          
+[36mINFO   [0m[Sep 25 19:49:18.916][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 19:49:18.916][operators.go: 132]   CSV: advanced-cluster-management.v2.8.0    
+[36mINFO   [0m[Sep 25 19:49:18.916][operators.go: 132]   CSV: devworkspace-operator.v0.22.0         
+[36mINFO   [0m[Sep 25 19:49:18.916][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 19:49:18.952][operators.go: 185] Getting installplans for op advanced-cluster-management.v2.8.0 (subs advanced-cluster-management-v2-8-0-sub ns test) 
+[36mINFO   [0m[Sep 25 19:49:18.990][operators.go: 185] Getting installplans for op devworkspace-operator.v0.22.0 (subs devworkspace-operator-fast-redhat-operators-openshift-marketplace ns test) 
+[36mINFO   [0m[Sep 25 19:49:19.024][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Sep 25 19:49:19.063][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 19:49:19.063][provider.go: 290] Operators found: 4                           
+[36mINFO   [0m[Sep 25 19:49:19.065][provider.go: 302] Completed the test environment build process in 6.03 seconds 
+[33mWARNING[0m[Sep 25 19:49:30.663][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 19:49:30.663][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 19:49:30.663][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 19:49:30.663][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 19:49:30.817][autodiscover_operators.go: 144] Found 4 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 19:49:30.817][autodiscover_operators.go: 146]  Subscriptions name: advanced-cluster-management-v2-8-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:30.818][autodiscover_operators.go: 146]  Subscriptions name: devworkspace-operator-fast-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:30.818][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:30.818][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:32.703][autodiscover_operators.go: 121] Found 245 CSVs:                              
+[36mINFO   [0m[Sep 25 19:49:32.703][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.703][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: default) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: default) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: default) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-public) 
+[36mINFO   [0m[Sep 25 19:49:32.704][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-system) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.705][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.706][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 19:49:32.707][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 19:49:32.708][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 19:49:32.709][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.710][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 19:49:32.711][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 19:49:32.712][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.713][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 19:49:32.714][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: openshift) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.715][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: advanced-cluster-management.v2.8.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: devworkspace-operator.v0.22.0 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 19:49:32.716][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 19:49:34.811][autodiscover_operators.go: 91] Found 4 CSVs:                                
+[36mINFO   [0m[Sep 25 19:49:34.811][autodiscover_operators.go: 93]  CSV name: advanced-cluster-management.v2.8.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.811][autodiscover_operators.go: 93]  CSV name: devworkspace-operator.v0.22.0 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.812][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.812][autodiscover_operators.go: 93]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.855][autodiscover_operators.go: 144] Found 4 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 19:49:34.855][autodiscover_operators.go: 146]  Subscriptions name: advanced-cluster-management-v2-8-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.855][autodiscover_operators.go: 146]  Subscriptions name: devworkspace-operator-fast-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.855][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.855][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 19:49:34.978][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 19:49:35.087][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 19:49:35.126][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 19:49:35.126][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 19:49:35.457][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 19:49:35.629][operators.go: 130] Found 5 unique CSVs                          
+[36mINFO   [0m[Sep 25 19:49:35.629][operators.go: 132]   CSV: devworkspace-operator.v0.22.0         
+[36mINFO   [0m[Sep 25 19:49:35.629][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 19:49:35.629][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 19:49:35.629][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 19:49:35.629][operators.go: 132]   CSV: advanced-cluster-management.v2.8.0    
+[36mINFO   [0m[Sep 25 19:49:35.662][operators.go: 185] Getting installplans for op advanced-cluster-management.v2.8.0 (subs advanced-cluster-management-v2-8-0-sub ns test) 
+[36mINFO   [0m[Sep 25 19:49:35.706][operators.go: 185] Getting installplans for op devworkspace-operator.v0.22.0 (subs devworkspace-operator-fast-redhat-operators-openshift-marketplace ns test) 
+[36mINFO   [0m[Sep 25 19:49:35.751][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Sep 25 19:49:35.752][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 19:49:35.752][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 19:49:35.798][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 19:49:35.799][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 19:49:35.902][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 19:49:35.974][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 19:49:36.040][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 19:49:36.105][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 19:49:36.168][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 19:49:36.226][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.226][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.227][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.227][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.227][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.227][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.229][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.229][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.229][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.229][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.230][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.230][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 19:49:36.235][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:36.235][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:36.235][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:36.235][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:36.235][provider.go: 341] container: extract pod: a2e792197f4b1a32adc91e0fb273bf66108686d5ba2cf8489d1336c41acpwqp ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:36.236][provider.go: 357] container: extract pod: a2e792197f4b1a32adc91e0fb273bf66108686d5ba2cf8489d1336c41acpwqp ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:36.236][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:36.236][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 19:49:36.236][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.236][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.237][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.237][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.237][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.237][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.238][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.238][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.238][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.238][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.239][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 19:49:36.239][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 19:49:36.240][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:36.240][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 19:49:36.240][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 19:49:36.240][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 19:49:36.242][operators.go: 130] Found 4 unique CSVs                          
+[36mINFO   [0m[Sep 25 19:49:36.242][operators.go: 132]   CSV: advanced-cluster-management.v2.8.0    
+[36mINFO   [0m[Sep 25 19:49:36.242][operators.go: 132]   CSV: devworkspace-operator.v0.22.0         
+[36mINFO   [0m[Sep 25 19:49:36.242][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 19:49:36.242][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 19:49:36.278][operators.go: 185] Getting installplans for op advanced-cluster-management.v2.8.0 (subs advanced-cluster-management-v2-8-0-sub ns test) 
+[36mINFO   [0m[Sep 25 19:49:36.317][operators.go: 185] Getting installplans for op devworkspace-operator.v0.22.0 (subs devworkspace-operator-fast-redhat-operators-openshift-marketplace ns test) 
+[36mINFO   [0m[Sep 25 19:49:36.351][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Sep 25 19:49:36.384][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 19:49:36.384][provider.go: 290] Operators found: 4                           
+[36mINFO   [0m[Sep 25 19:49:36.384][provider.go: 302] Completed the test environment build process in 5.80 seconds 
+[33mWARNING[0m[Sep 25 19:49:36.401][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695671352[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0mmanageability [0m[1mmanageability-containers-image-tag[0m [38;5;204m[extended, manageability-containers-image-tag, manageability][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/manageability/suite.go:42[0m
+  Container container: address-space-controller pod: address-space-controller-56c797f9ff-8g8xm ns: test is missing image tag(s)
+  Container container: manager pod: csi-addons-controller-manager-74c886cf9b-zprf4 ns: test is missing image tag(s)
+  Container container: kube-rbac-proxy pod: csi-addons-controller-manager-74c886cf9b-zprf4 ns: test is missing image tag(s)
+  Container container: csi-driver-registrar pod: csi-cephfsplugin-2kcsx ns: test is missing image tag(s)
+  Container container: csi-cephfsplugin pod: csi-cephfsplugin-2kcsx ns: test is missing image tag(s)
+  Container container: csi-driver-registrar pod: csi-cephfsplugin-96crs ns: test is missing image tag(s)
+  Container container: csi-cephfsplugin pod: csi-cephfsplugin-96crs ns: test is missing image tag(s)
+  Container container: csi-driver-registrar pod: csi-cephfsplugin-jx5hn ns: test is missing image tag(s)
+  Container container: csi-cephfsplugin pod: csi-cephfsplugin-jx5hn ns: test is missing image tag(s)
+  Container container: csi-provisioner pod: csi-cephfsplugin-provisioner-7dc6567d6b-l84rz ns: test is missing image tag(s)
+  Container container: csi-attacher pod: csi-cephfsplugin-provisioner-7dc6567d6b-l84rz ns: test is missing image tag(s)
+  Container container: csi-resizer pod: csi-cephfsplugin-provisioner-7dc6567d6b-l84rz ns: test is missing image tag(s)
+  Container container: csi-snapshotter pod: csi-cephfsplugin-provisioner-7dc6567d6b-l84rz ns: test is missing image tag(s)
+  Container container: csi-cephfsplugin pod: csi-cephfsplugin-provisioner-7dc6567d6b-l84rz ns: test is missing image tag(s)
+  Container container: csi-provisioner pod: csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv ns: test is missing image tag(s)
+  Container container: csi-attacher pod: csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv ns: test is missing image tag(s)
+  Container container: csi-resizer pod: csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv ns: test is missing image tag(s)
+  Container container: csi-snapshotter pod: csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv ns: test is missing image tag(s)
+  Container container: csi-cephfsplugin pod: csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv ns: test is missing image tag(s)
+  Container container: csi-driver-registrar pod: csi-rbdplugin-6tlz4 ns: test is missing image tag(s)
+  Container container: csi-rbdplugin pod: csi-rbdplugin-6tlz4 ns: test is missing image tag(s)
+  Container container: csi-addons pod: csi-rbdplugin-6tlz4 ns: test is missing image tag(s)
+  Container container: csi-driver-registrar pod: csi-rbdplugin-djrnz ns: test is missing image tag(s)
+  Container container: csi-rbdplugin pod: csi-rbdplugin-djrnz ns: test is missing image tag(s)
+  Container container: csi-addons pod: csi-rbdplugin-djrnz ns: test is missing image tag(s)
+  Container container: csi-driver-registrar pod: csi-rbdplugin-dkm96 ns: test is missing image tag(s)
+  Container container: csi-rbdplugin pod: csi-rbdplugin-dkm96 ns: test is missing image tag(s)
+  Container container: csi-addons pod: csi-rbdplugin-dkm96 ns: test is missing image tag(s)
+  Container container: csi-provisioner pod: csi-rbdplugin-provisioner-58fc6c8f5-q7vls ns: test is missing image tag(s)
+  Container container: csi-attacher pod: csi-rbdplugin-provisioner-58fc6c8f5-q7vls ns: test is missing image tag(s)
+  Container container: csi-resizer pod: csi-rbdplugin-provisioner-58fc6c8f5-q7vls ns: test is missing image tag(s)
+  Container container: csi-snapshotter pod: csi-rbdplugin-provisioner-58fc6c8f5-q7vls ns: test is missing image tag(s)
+  Container container: csi-rbdplugin pod: csi-rbdplugin-provisioner-58fc6c8f5-q7vls ns: test is missing image tag(s)
+  Container container: csi-provisioner pod: csi-rbdplugin-provisioner-58fc6c8f5-s8h4p ns: test is missing image tag(s)
+  Container container: csi-attacher pod: csi-rbdplugin-provisioner-58fc6c8f5-s8h4p ns: test is missing image tag(s)
+  Container container: csi-resizer pod: csi-rbdplugin-provisioner-58fc6c8f5-s8h4p ns: test is missing image tag(s)
+  Container container: csi-snapshotter pod: csi-rbdplugin-provisioner-58fc6c8f5-s8h4p ns: test is missing image tag(s)
+  Container container: csi-rbdplugin pod: csi-rbdplugin-provisioner-58fc6c8f5-s8h4p ns: test is missing image tag(s)
+  Container container: devworkspace-controller pod: devworkspace-controller-manager-8b54797db-hgh9z ns: test is missing image tag(s)
+  Container container: kube-rbac-proxy pod: devworkspace-controller-manager-8b54797db-hgh9z ns: test is missing image tag(s)
+  Container container: kube-rbac-proxy pod: devworkspace-webhook-server-f94455778-g7cw6 ns: test is missing image tag(s)
+  Container container: webhook-server pod: devworkspace-webhook-server-f94455778-g7cw6 ns: test is missing image tag(s)
+  Container container: security-profiles-operator pod: security-profiles-operator-webhook-d844fd745-2vvs5 ns: test is missing image tag(s)
+  Container container: security-profiles-operator pod: security-profiles-operator-webhook-d844fd745-6ngkl ns: test is missing image tag(s)
+  Container container: security-profiles-operator pod: security-profiles-operator-webhook-d844fd745-hvr8w ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-controller-manager-56f88bb95c-v5nfs ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-ds-22l2g ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-ds-2pp4k ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-ds-dds99 ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-ds-jf9b7 ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-ds-rvsn6 ns: test is missing image tag(s)
+  Container container: manager pod: self-node-remediation-ds-xhm2j ns: test is missing image tag(s)
+  {"CompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706","registry-grpc"]}],"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","address-space-controller-56c797f9ff-8g8xm","address-space-controller"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-addons-controller-manager-74c886cf9b-zprf4","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-addons-controller-manager-74c886cf9b-zprf4","kube-rbac-proxy"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-2kcsx","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-2kcsx","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-96crs","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-96crs","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-jx5hn","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-jx5hn","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-6tlz4","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-6tlz4","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-6tlz4","csi-addons"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-djrnz","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-djrnz","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-djrnz","csi-addons"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-dkm96","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-dkm96","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-dkm96","csi-addons"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-controller-manager-8b54797db-hgh9z","devworkspace-controller"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-controller-manager-8b54797db-hgh9z","kube-rbac-proxy"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-webhook-server-f94455778-g7cw6","kube-rbac-proxy"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-webhook-server-f94455778-g7cw6","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","security-profiles-operator-webhook-d844fd745-2vvs5","security-profiles-operator"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","security-profiles-operator-webhook-d844fd745-6ngkl","security-profiles-operator"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","security-profiles-operator-webhook-d844fd745-hvr8w","security-profiles-operator"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-controller-manager-56f88bb95c-v5nfs","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-22l2g","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-2pp4k","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-dds99","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-jf9b7","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-rvsn6","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-xhm2j","manager"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 09/25/23 19:49:36.42[0m
+[38;5;9m• [FAILED] [0.009 seconds][0m
+[0mmanageability [38;5;9m[1m[It] manageability-containers-image-tag[0m [38;5;204m[extended, manageability-containers-image-tag, manageability][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/manageability/suite.go:42[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is tagged","test","d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706","registry-grpc"]}],"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","address-space-controller-56c797f9ff-8g8xm","address-space-controller"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-addons-controller-manager-74c886cf9b-zprf4","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-addons-controller-manager-74c886cf9b-zprf4","kube-rbac-proxy"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-2kcsx","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-2kcsx","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-96crs","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-96crs","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-jx5hn","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-jx5hn","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-l84rz","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-cephfsplugin-provisioner-7dc6567d6b-tfdtv","csi-cephfsplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-6tlz4","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-6tlz4","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-6tlz4","csi-addons"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-djrnz","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-djrnz","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-djrnz","csi-addons"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-dkm96","csi-driver-registrar"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-dkm96","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-dkm96","csi-addons"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-q7vls","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-provisioner"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-attacher"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-resizer"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-snapshotter"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","csi-rbdplugin-provisioner-58fc6c8f5-s8h4p","csi-rbdplugin"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-controller-manager-8b54797db-hgh9z","devworkspace-controller"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-controller-manager-8b54797db-hgh9z","kube-rbac-proxy"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-webhook-server-f94455778-g7cw6","kube-rbac-proxy"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","devworkspace-webhook-server-f94455778-g7cw6","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","security-profiles-operator-webhook-d844fd745-2vvs5","security-profiles-operator"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","security-profiles-operator-webhook-d844fd745-6ngkl","security-profiles-operator"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","security-profiles-operator-webhook-d844fd745-hvr8w","security-profiles-operator"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-controller-manager-56f88bb95c-v5nfs","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-22l2g","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-2pp4k","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-dds99","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-jf9b7","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-rvsn6","manager"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name"],"ObjectFieldsValues":["Container is missing image tag(s)","test","self-node-remediation-ds-xhm2j","manager"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 09/25/23 19:49:36.42[0m
+[38;5;243m------------------------------[0m
+[0mmanageability [0m[1mmanageability-container-port-name-format[0m [38;5;204m[extended, manageability-container-port-name-format, manageability][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/manageability/suite.go:48[0m
+  container: manager pod: csi-addons-controller-manager-74c886cf9b-zprf4 ns: test: ContainerPort webhook-server does not follow the partner naming conventions
+  container: kube-rbac-proxy pod: csi-addons-controller-manager-74c886cf9b-zprf4 ns: test: ContainerPort https does not follow the partner naming conventions
+  container: csi-addons pod: csi-rbdplugin-6tlz4 ns: test: ContainerPort  does not follow the partner naming conventions
+  container: csi-addons pod: csi-rbdplugin-djrnz ns: test: ContainerPort  does not follow the partner naming conventions
+  container: csi-addons pod: csi-rbdplugin-dkm96 ns: test: ContainerPort  does not follow the partner naming conventions
+  container: devworkspace-controller pod: devworkspace-controller-manager-8b54797db-hgh9z ns: test: ContainerPort conversion does not follow the partner naming conventions
+  container: devworkspace-controller pod: devworkspace-controller-manager-8b54797db-hgh9z ns: test: ContainerPort liveness-port does not follow the partner naming conventions
+  container: kube-rbac-proxy pod: devworkspace-controller-manager-8b54797db-hgh9z ns: test: ContainerPort metrics does not follow the partner naming conventions
+  container: kube-rbac-proxy pod: devworkspace-webhook-server-f94455778-g7cw6 ns: test: ContainerPort metrics does not follow the partner naming conventions
+  container: webhook-server pod: devworkspace-webhook-server-f94455778-g7cw6 ns: test: ContainerPort webhook-server does not follow the partner naming conventions
+  container: webhook-server pod: devworkspace-webhook-server-f94455778-g7cw6 ns: test: ContainerPort liveness-port does not follow the partner naming conventions
+  container: security-profiles-operator pod: security-profiles-operator-webhook-d844fd745-2vvs5 ns: test: ContainerPort webhook does not follow the partner naming conventions
+  container: security-profiles-operator pod: security-profiles-operator-webhook-d844fd745-6ngkl ns: test: ContainerPort webhook does not follow the partner naming conventions
+  container: security-profiles-operator pod: security-profiles-operator-webhook-d844fd745-hvr8w ns: test: ContainerPort webhook does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-controller-manager-56f88bb95c-v5nfs ns: test: ContainerPort webhook-server does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-ds-22l2g ns: test: ContainerPort self-n-r-port does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-ds-2pp4k ns: test: ContainerPort self-n-r-port does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-ds-dds99 ns: test: ContainerPort self-n-r-port does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-ds-jf9b7 ns: test: ContainerPort self-n-r-port does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-ds-rvsn6 ns: test: ContainerPort self-n-r-port does not follow the partner naming conventions
+  container: manager pod: self-node-remediation-ds-xhm2j ns: test: ContainerPort self-n-r-port does not follow the partner naming conventions
+  {"CompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","address-space-controller-56c797f9ff-8g8xm","address-space-controller","http"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706","registry-grpc","grpc"]}],"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-addons-controller-manager-74c886cf9b-zprf4","manager","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-addons-controller-manager-74c886cf9b-zprf4","kube-rbac-proxy","https"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-rbdplugin-6tlz4","csi-addons",""]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-rbdplugin-djrnz","csi-addons",""]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-rbdplugin-dkm96","csi-addons",""]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-controller-manager-8b54797db-hgh9z","devworkspace-controller","conversion"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-controller-manager-8b54797db-hgh9z","devworkspace-controller","liveness-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-controller-manager-8b54797db-hgh9z","kube-rbac-proxy","metrics"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-webhook-server-f94455778-g7cw6","kube-rbac-proxy","metrics"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-webhook-server-f94455778-g7cw6","webhook-server","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-webhook-server-f94455778-g7cw6","webhook-server","liveness-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","security-profiles-operator-webhook-d844fd745-2vvs5","security-profiles-operator","webhook"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","security-profiles-operator-webhook-d844fd745-6ngkl","security-profiles-operator","webhook"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","security-profiles-operator-webhook-d844fd745-hvr8w","security-profiles-operator","webhook"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-controller-manager-56f88bb95c-v5nfs","manager","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-22l2g","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-2pp4k","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-dds99","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-jf9b7","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-rvsn6","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-xhm2j","manager","self-n-r-port"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 09/25/23 19:49:36.425[0m
+[38;5;9m• [FAILED] [0.002 seconds][0m
+[0mmanageability [38;5;9m[1m[It] manageability-container-port-name-format[0m [38;5;204m[extended, manageability-container-port-name-format, manageability][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/manageability/suite.go:48[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","address-space-controller-56c797f9ff-8g8xm","address-space-controller","http"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc","grpc"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort follows the partner naming conventions","test","d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706","registry-grpc","grpc"]}],"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-addons-controller-manager-74c886cf9b-zprf4","manager","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-addons-controller-manager-74c886cf9b-zprf4","kube-rbac-proxy","https"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-rbdplugin-6tlz4","csi-addons",""]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-rbdplugin-djrnz","csi-addons",""]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","csi-rbdplugin-dkm96","csi-addons",""]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-controller-manager-8b54797db-hgh9z","devworkspace-controller","conversion"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-controller-manager-8b54797db-hgh9z","devworkspace-controller","liveness-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-controller-manager-8b54797db-hgh9z","kube-rbac-proxy","metrics"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-webhook-server-f94455778-g7cw6","kube-rbac-proxy","metrics"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-webhook-server-f94455778-g7cw6","webhook-server","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","devworkspace-webhook-server-f94455778-g7cw6","webhook-server","liveness-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","security-profiles-operator-webhook-d844fd745-2vvs5","security-profiles-operator","webhook"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","security-profiles-operator-webhook-d844fd745-6ngkl","security-profiles-operator","webhook"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","security-profiles-operator-webhook-d844fd745-hvr8w","security-profiles-operator","webhook"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-controller-manager-56f88bb95c-v5nfs","manager","webhook-server"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-22l2g","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-2pp4k","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-dds99","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-jf9b7","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-rvsn6","manager","self-n-r-port"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Container Port"],"ObjectFieldsValues":["ContainerPort does not follow the partner naming conventions","test","self-node-remediation-ds-xhm2j","manager","self-n-r-port"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 09/25/23 19:49:36.425[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-helm-version[0m [38;5;204m[common, affiliated-certification-helm-version, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:61[0m
+  Tiller pod is not found in all namespaces helm version is v3
+
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":null}
+[38;5;10m• [0.580 seconds][0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-container-is-certified[0m [38;5;204m[common, affiliated-certification-container-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:66[0m
+  [38;5;14m[SKIPPED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312 [38;5;243m@ 09/25/23 19:49:37.241[0m
+[38;5;14mS [SKIPPED] [0.234 seconds][0m
+[0maffiliated-certification [38;5;14m[1m[It] affiliated-certification-container-is-certified[0m [38;5;204m[common, affiliated-certification-container-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:66[0m
+
+  [38;5;14m[SKIPPED] Test skipped because there are no map[configuration.ContainerImageIdentifier]bool to test, please check under test labels[0m
+  [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312[0m [38;5;243m@ 09/25/23 19:49:37.241[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-operator-is-certified[0m [38;5;204m[common, affiliated-certification-operator-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:72[0m
+  [1mSTEP:[0m Verify operator as certified. Number of operators to check: 4 [38;5;243m@ 09/25/23 19:49:37.536[0m
+[36mINFO   [0m[Sep 25 19:49:38.447][suite.go: 151] Operator advanced-cluster-management.v2.8.0 (channel operator-sdk-run-bundle) not certified for OpenShift 4.13. 
+  Operator advanced-cluster-management.v2.8.0 (channel operator-sdk-run-bundle) failed to be certified for OpenShift 4.13
+[36mINFO   [0m[Sep 25 19:49:39.076][suite.go: 151] Operator devworkspace-operator.v0.22.0 (channel fast) not certified for OpenShift 4.13. 
+  Operator devworkspace-operator.v0.22.0 (channel fast) failed to be certified for OpenShift 4.13
+[36mINFO   [0m[Sep 25 19:49:39.754][suite.go: 151] Operator odf-csi-addons-operator.v4.13.0-rhodf (channel operator-sdk-run-bundle) not certified for OpenShift 4.13. 
+  Operator odf-csi-addons-operator.v4.13.0-rhodf (channel operator-sdk-run-bundle) failed to be certified for OpenShift 4.13
+[36mINFO   [0m[Sep 25 19:49:40.493][suite.go: 151] Operator self-node-remediation.v0.6.1 (channel operator-sdk-run-bundle) not certified for OpenShift 4.13. 
+  Operator self-node-remediation.v0.6.1 (channel operator-sdk-run-bundle) failed to be certified for OpenShift 4.13
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","advanced-cluster-management.v2.8.0","4.13","operator-sdk-run-bundle"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","devworkspace-operator.v0.22.0","4.13","fast"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","odf-csi-addons-operator.v4.13.0-rhodf","4.13","operator-sdk-run-bundle"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","self-node-remediation.v0.6.1","4.13","operator-sdk-run-bundle"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 09/25/23 19:49:40.501[0m
+[38;5;9m• [FAILED] [3.258 seconds][0m
+[0maffiliated-certification [38;5;9m[1m[It] affiliated-certification-operator-is-certified[0m [38;5;204m[common, affiliated-certification-operator-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:72[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","advanced-cluster-management.v2.8.0","4.13","operator-sdk-run-bundle"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","devworkspace-operator.v0.22.0","4.13","fast"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","odf-csi-addons-operator.v4.13.0-rhodf","4.13","operator-sdk-run-bundle"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","self-node-remediation.v0.6.1","4.13","operator-sdk-run-bundle"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 09/25/23 19:49:40.501[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-helmchart-is-certified[0m [38;5;204m[common, affiliated-certification-helmchart-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:77[0m
+  [38;5;14m[SKIPPED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312 [38;5;243m@ 09/25/23 19:49:40.762[0m
+[38;5;14mS [SKIPPED] [0.257 seconds][0m
+[0maffiliated-certification [38;5;14m[1m[It] affiliated-certification-helmchart-is-certified[0m [38;5;204m[common, affiliated-certification-helmchart-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:77[0m
+
+  [38;5;14m[SKIPPED] Test skipped because there are no []*release.Release to test, please check under test labels[0m
+  [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312[0m [38;5;243m@ 09/25/23 19:49:40.762[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-container-is-certified-digest[0m [38;5;204m[common, affiliated-certification-container-is-certified-digest, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:82[0m
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  Container name = "" or repository = "" is missing, skipping this container to query
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706","registry-grpc","quay.io","operator-framework/opm"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 09/25/23 19:49:47.813[0m
+[38;5;9m• [FAILED] [7.053 seconds][0m
+[0maffiliated-certification [38;5;9m[1m[It] affiliated-certification-container-is-certified-digest[0m [38;5;204m[common, affiliated-certification-container-is-certified-digest, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:82[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","85675e17af2107304f806d4e3fbadde5d3005fd37150371db71677da100ba53","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","9071e9f667a677160bccc213d83de973a3a4e7110899325c9760e4c919e9388","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","d4681f98fc2b9661435ddd8f0e86b1bda8824ac566f8a600c90d1d1f4370706","registry-grpc","quay.io","operator-framework/opm"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 09/25/23 19:49:47.813[0m
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Sep 25 19:54:48.851][phasecheck.go: 50] Timeout waiting for operator csv: advanced-cluster-management.v2.8.0 ns: test to be ready 

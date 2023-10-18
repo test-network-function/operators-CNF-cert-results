@@ -1,0 +1,264 @@
+time="2023-09-25T00:58:21Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T00:58:21Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 00:58:21.757][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 00:58:21.759][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 00:58:21.760][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 00:58:21.760][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 00:58:21.760][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 00:58:21.760][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 00:58:22.219][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 00:58:22.226][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 00:58:22.309][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 00:58:22.309][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 00:58:22.310][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 00:58:22.310][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 00:58:22.424][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 00:58:22.425][autodiscover_operators.go: 146]  Subscriptions name: aci-containers-operator-v1-0-3-sub (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:22.477][autodiscover_operators.go: 121] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 00:58:22.478][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 00:58:22.478][autodiscover_operators.go: 123]  CSV name: aci-containers-operator.v1.0.3 (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:24.984][autodiscover_operators.go: 91] Found 1 CSVs:                                
+[36mINFO   [0m[Sep 25 00:58:24.984][autodiscover_operators.go: 93]  CSV name: aci-containers-operator.v1.0.3 (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:25.029][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 00:58:25.029][autodiscover_operators.go: 146]  Subscriptions name: aci-containers-operator-v1-0-3-sub (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:25.153][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 00:58:25.261][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 00:58:25.305][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 00:58:25.306][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 00:58:25.635][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 00:58:25.803][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 00:58:25.804][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 00:58:25.804][operators.go: 132]   CSV: aci-containers-operator.v1.0.3        
+[36mINFO   [0m[Sep 25 00:58:25.841][operators.go: 185] Getting installplans for op aci-containers-operator.v1.0.3 (subs aci-containers-operator-v1-0-3-sub ns test) 
+[33mWARNING[0m[Sep 25 00:58:25.842][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 00:58:25.842][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 00:58:25.843][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 00:58:25.940][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 00:58:26.011][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 00:58:26.081][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 00:58:26.148][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 00:58:26.217][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 00:58:26.285][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.285][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.286][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.286][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.286][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.286][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.288][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.288][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.289][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.289][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.290][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.290][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.293][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.294][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 00:58:26.294][provider.go: 341] container: aci-containers-operator pod: aci-containers-operator-866f5b7cfd-4ssr6 ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:26.294][provider.go: 357] container: aci-containers-operator pod: aci-containers-operator-866f5b7cfd-4ssr6 ns: test is not running (reason: waiting - ImagePullBackOff, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 00:58:26.295][provider.go: 341] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:26.295][provider.go: 357] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 00:58:26.295][provider.go: 341] container: extract pod: bcc9d41206684ad65d2dc39d3c5e9285d67e1b0cbcc57f40fd147f45cavvdhv ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:26.295][provider.go: 357] container: extract pod: bcc9d41206684ad65d2dc39d3c5e9285d67e1b0cbcc57f40fd147f45cavvdhv ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 00:58:26.295][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.295][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.296][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.296][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.296][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.296][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.298][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.298][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.298][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.298][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.298][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:26.299][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 00:58:26.300][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:26.300][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 00:58:26.300][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:26.300][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 00:58:26.301][operators.go: 130] Found 1 unique CSVs                          
+[36mINFO   [0m[Sep 25 00:58:26.301][operators.go: 132]   CSV: aci-containers-operator.v1.0.3        
+[36mINFO   [0m[Sep 25 00:58:26.337][operators.go: 185] Getting installplans for op aci-containers-operator.v1.0.3 (subs aci-containers-operator-v1-0-3-sub ns test) 
+[36mINFO   [0m[Sep 25 00:58:26.337][provider.go: 290] Operators found: 1                           
+[36mINFO   [0m[Sep 25 00:58:26.338][provider.go: 302] Completed the test environment build process in 4.12 seconds 
+[33mWARNING[0m[Sep 25 00:58:38.081][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 00:58:38.082][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 00:58:38.082][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 00:58:38.082][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 00:58:38.226][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 00:58:38.226][autodiscover_operators.go: 146]  Subscriptions name: aci-containers-operator-v1-0-3-sub (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:38.317][autodiscover_operators.go: 121] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 00:58:38.317][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 00:58:38.317][autodiscover_operators.go: 123]  CSV name: aci-containers-operator.v1.0.3 (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:41.150][autodiscover_operators.go: 91] Found 1 CSVs:                                
+[36mINFO   [0m[Sep 25 00:58:41.151][autodiscover_operators.go: 93]  CSV name: aci-containers-operator.v1.0.3 (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:41.186][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 00:58:41.186][autodiscover_operators.go: 146]  Subscriptions name: aci-containers-operator-v1-0-3-sub (ns: test) 
+[36mINFO   [0m[Sep 25 00:58:41.333][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 00:58:41.464][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 00:58:41.506][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 00:58:41.506][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 00:58:41.858][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 00:58:42.062][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 00:58:42.063][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 00:58:42.063][operators.go: 132]   CSV: aci-containers-operator.v1.0.3        
+[36mINFO   [0m[Sep 25 00:58:42.105][operators.go: 185] Getting installplans for op aci-containers-operator.v1.0.3 (subs aci-containers-operator-v1-0-3-sub ns test) 
+[33mWARNING[0m[Sep 25 00:58:42.106][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 00:58:42.106][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 00:58:42.106][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 00:58:42.206][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 00:58:42.283][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 00:58:42.353][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 00:58:42.431][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 00:58:42.498][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 00:58:42.575][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.575][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.576][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.576][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.576][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.576][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.578][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.578][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.579][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.579][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.579][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.579][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.582][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.582][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 00:58:42.583][provider.go: 341] container: aci-containers-operator pod: aci-containers-operator-866f5b7cfd-4ssr6 ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:42.583][provider.go: 357] container: aci-containers-operator pod: aci-containers-operator-866f5b7cfd-4ssr6 ns: test is not running (reason: waiting - ImagePullBackOff, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 00:58:42.583][provider.go: 341] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:42.583][provider.go: 357] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 00:58:42.584][provider.go: 341] container: extract pod: bcc9d41206684ad65d2dc39d3c5e9285d67e1b0cbcc57f40fd147f45cavvdhv ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:42.584][provider.go: 357] container: extract pod: bcc9d41206684ad65d2dc39d3c5e9285d67e1b0cbcc57f40fd147f45cavvdhv ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 00:58:42.584][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.584][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.585][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.585][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.585][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.585][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.586][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.586][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.586][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.587][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.587][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 00:58:42.587][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 00:58:42.588][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:42.588][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 00:58:42.588][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 00:58:42.588][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 00:58:42.589][operators.go: 130] Found 1 unique CSVs                          
+[36mINFO   [0m[Sep 25 00:58:42.589][operators.go: 132]   CSV: aci-containers-operator.v1.0.3        
+[36mINFO   [0m[Sep 25 00:58:42.636][operators.go: 185] Getting installplans for op aci-containers-operator.v1.0.3 (subs aci-containers-operator-v1-0-3-sub ns test) 
+[36mINFO   [0m[Sep 25 00:58:42.636][provider.go: 290] Operators found: 1                           
+[36mINFO   [0m[Sep 25 00:58:42.637][provider.go: 302] Completed the test environment build process in 4.64 seconds 
+[33mWARNING[0m[Sep 25 00:58:42.647][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695603501[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-helm-version[0m [38;5;204m[common, affiliated-certification-helm-version, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:61[0m
+  Tiller pod is not found in all namespaces helm version is v3
+
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":null}
+[38;5;10m• [1.084 seconds][0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-container-is-certified[0m [38;5;204m[common, affiliated-certification-container-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:66[0m
+  [38;5;14m[SKIPPED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312 [38;5;243m@ 09/25/23 00:58:43.92[0m
+[38;5;14mS [SKIPPED] [0.177 seconds][0m
+[0maffiliated-certification [38;5;14m[1m[It] affiliated-certification-container-is-certified[0m [38;5;204m[common, affiliated-certification-container-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:66[0m
+
+  [38;5;14m[SKIPPED] Test skipped because there are no map[configuration.ContainerImageIdentifier]bool to test, please check under test labels[0m
+  [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312[0m [38;5;243m@ 09/25/23 00:58:43.92[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-operator-is-certified[0m [38;5;204m[common, affiliated-certification-operator-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:72[0m
+  [1mSTEP:[0m Verify operator as certified. Number of operators to check: 1 [38;5;243m@ 09/25/23 00:58:44.128[0m
+[36mINFO   [0m[Sep 25 00:58:47.157][suite.go: 151] Operator aci-containers-operator.v1.0.3 (channel operator-sdk-run-bundle) not certified for OpenShift 4.13. 
+  Operator aci-containers-operator.v1.0.3 (channel operator-sdk-run-bundle) failed to be certified for OpenShift 4.13
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","aci-containers-operator.v1.0.3","4.13","operator-sdk-run-bundle"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 09/25/23 00:58:47.162[0m
+[38;5;9m• [FAILED] [3.237 seconds][0m
+[0maffiliated-certification [38;5;9m[1m[It] affiliated-certification-operator-is-certified[0m [38;5;204m[common, affiliated-certification-operator-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:72[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","aci-containers-operator.v1.0.3","4.13","operator-sdk-run-bundle"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 09/25/23 00:58:47.162[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-helmchart-is-certified[0m [38;5;204m[common, affiliated-certification-helmchart-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:77[0m
+  [38;5;14m[SKIPPED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312 [38;5;243m@ 09/25/23 00:58:47.43[0m
+[38;5;14mS [SKIPPED] [0.263 seconds][0m
+[0maffiliated-certification [38;5;14m[1m[It] affiliated-certification-helmchart-is-certified[0m [38;5;204m[common, affiliated-certification-helmchart-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:77[0m
+
+  [38;5;14m[SKIPPED] Test skipped because there are no []*release.Release to test, please check under test labels[0m
+  [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312[0m [38;5;243m@ 09/25/23 00:58:47.43[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-container-is-certified-digest[0m [38;5;204m[common, affiliated-certification-container-is-certified-digest, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:82[0m
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 2af651e43fa7fa80227acfb9c8e3743a7b2492b378da7b000aeaa4c62ca4865 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: a898cb65de29ecae7075b30fd3b79ff5f2bedf6f6224fd104ad930be7e82dcd ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  Container name = "" or repository = "" is missing, skipping this container to query
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","2af651e43fa7fa80227acfb9c8e3743a7b2492b378da7b000aeaa4c62ca4865","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","a898cb65de29ecae7075b30fd3b79ff5f2bedf6f6224fd104ad930be7e82dcd","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc","quay.io","operator-framework/opm"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 09/25/23 00:58:48.639[0m
+[38;5;9m• [FAILED] [1.207 seconds][0m
+[0maffiliated-certification [38;5;9m[1m[It] affiliated-certification-container-is-certified-digest[0m [38;5;204m[common, affiliated-certification-container-is-certified-digest, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:82[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","1d9ecea6bd177d0eecc89426d7658502fcab44c3e2bce4b3b1a40ed89fd444a","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","2af651e43fa7fa80227acfb9c8e3743a7b2492b378da7b000aeaa4c62ca4865","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","a898cb65de29ecae7075b30fd3b79ff5f2bedf6f6224fd104ad930be7e82dcd","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","bbe7e6c1d75c4de2f47e2c825c930568e85f1134545e9d890a0c9f3d9187a4d","registry-grpc","quay.io","operator-framework/opm"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 09/25/23 00:58:48.639[0m
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Sep 25 01:03:49.381][phasecheck.go: 50] Timeout waiting for operator csv: aci-containers-operator.v1.0.3 ns: test to be ready 

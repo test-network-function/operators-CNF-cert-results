@@ -1,0 +1,335 @@
+time="2023-09-25T23:28:29Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T23:28:29Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 23:28:29.933][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 23:28:29.935][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 23:28:29.935][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 23:28:29.935][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 23:28:29.935][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 23:28:29.935][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 23:28:30.399][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 23:28:30.407][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 23:28:30.489][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 23:28:30.490][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 23:28:30.490][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 23:28:30.490][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 23:28:30.596][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 23:28:30.596][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:30.596][autodiscover_operators.go: 146]  Subscriptions name: verticalpodautoscaler-v4-13-0-202306070816-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:31.144][autodiscover_operators.go: 121] Found 83 CSVs:                               
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: default) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-public) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-system) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.145][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.146][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 23:28:31.147][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 23:28:31.148][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: verticalpodautoscaler.v4.13.0-202306070816 (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:31.149][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 23:28:33.225][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 23:28:33.225][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:33.225][autodiscover_operators.go: 93]  CSV name: verticalpodautoscaler.v4.13.0-202306070816 (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:33.271][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 23:28:33.271][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:33.271][autodiscover_operators.go: 146]  Subscriptions name: verticalpodautoscaler-v4-13-0-202306070816-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:33.407][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 23:28:33.505][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 23:28:33.550][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 23:28:33.551][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 23:28:33.916][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 23:28:34.102][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Sep 25 23:28:34.102][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 23:28:34.103][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 23:28:34.103][operators.go: 132]   CSV: verticalpodautoscaler.v4.13.0-202306070816 
+[36mINFO   [0m[Sep 25 23:28:34.144][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Sep 25 23:28:34.145][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 23:28:34.145][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 23:28:34.187][operators.go: 185] Getting installplans for op verticalpodautoscaler.v4.13.0-202306070816 (subs verticalpodautoscaler-v4-13-0-202306070816-sub ns test) 
+[36mINFO   [0m[Sep 25 23:28:34.189][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 23:28:34.285][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 23:28:34.359][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 23:28:34.433][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 23:28:34.504][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 23:28:34.569][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 23:28:34.638][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.638][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.638][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.638][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.639][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.639][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.640][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.640][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.641][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.641][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.641][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.641][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 23:28:34.644][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:34.645][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 23:28:34.645][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:34.645][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 23:28:34.646][provider.go: 341] container: extract pod: af37b65d2cd527f6946a4b1c1bfa63055d9c94188d955d4f578550917flvspq ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:34.646][provider.go: 357] container: extract pod: af37b65d2cd527f6946a4b1c1bfa63055d9c94188d955d4f578550917flvspq ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 23:28:34.646][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:34.646][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 23:28:34.646][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.646][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.647][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.647][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.647][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.647][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.648][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.648][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.648][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.648][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.648][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:34.648][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 23:28:34.649][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:34.649][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 23:28:34.651][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 23:28:34.651][operators.go: 132]   CSV: verticalpodautoscaler.v4.13.0-202306070816 
+[36mINFO   [0m[Sep 25 23:28:34.651][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 23:28:34.686][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Sep 25 23:28:34.725][operators.go: 185] Getting installplans for op verticalpodautoscaler.v4.13.0-202306070816 (subs verticalpodautoscaler-v4-13-0-202306070816-sub ns test) 
+[36mINFO   [0m[Sep 25 23:28:34.726][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Sep 25 23:28:34.727][provider.go: 302] Completed the test environment build process in 4.33 seconds 
+[33mWARNING[0m[Sep 25 23:28:46.822][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 23:28:46.822][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 23:28:46.822][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 23:28:46.822][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 23:28:46.965][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 23:28:46.965][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:46.965][autodiscover_operators.go: 146]  Subscriptions name: verticalpodautoscaler-v4-13-0-202306070816-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 121] Found 83 CSVs:                               
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: default) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-public) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: kube-system) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 23:28:47.553][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 23:28:47.554][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.555][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 23:28:47.556][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: openshift) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: verticalpodautoscaler.v4.13.0-202306070816 (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:47.557][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 23:28:49.642][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 23:28:49.642][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:49.642][autodiscover_operators.go: 93]  CSV name: verticalpodautoscaler.v4.13.0-202306070816 (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:49.680][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 23:28:49.680][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:49.680][autodiscover_operators.go: 146]  Subscriptions name: verticalpodautoscaler-v4-13-0-202306070816-sub (ns: test) 
+[36mINFO   [0m[Sep 25 23:28:49.795][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 23:28:49.903][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 23:28:49.950][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 23:28:49.950][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 23:28:50.505][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 23:28:50.696][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Sep 25 23:28:50.696][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 23:28:50.696][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 23:28:50.696][operators.go: 132]   CSV: verticalpodautoscaler.v4.13.0-202306070816 
+[36mINFO   [0m[Sep 25 23:28:50.733][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Sep 25 23:28:50.734][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 23:28:50.734][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 23:28:50.773][operators.go: 185] Getting installplans for op verticalpodautoscaler.v4.13.0-202306070816 (subs verticalpodautoscaler-v4-13-0-202306070816-sub ns test) 
+[36mINFO   [0m[Sep 25 23:28:50.774][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 23:28:50.875][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 23:28:50.949][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 23:28:51.046][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 23:28:51.116][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 23:28:51.179][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 23:28:51.239][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.239][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.239][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.239][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.239][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.239][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.241][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.241][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.242][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.242][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.242][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.242][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 23:28:51.245][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:51.245][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 23:28:51.246][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:51.246][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846adrxmtr ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 23:28:51.246][provider.go: 341] container: extract pod: af37b65d2cd527f6946a4b1c1bfa63055d9c94188d955d4f578550917flvspq ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:51.246][provider.go: 357] container: extract pod: af37b65d2cd527f6946a4b1c1bfa63055d9c94188d955d4f578550917flvspq ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 23:28:51.247][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:51.247][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 23:28:51.247][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.247][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.247][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.247][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.247][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.248][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.248][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.248][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.249][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.249][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.249][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 23:28:51.249][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 23:28:51.250][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 23:28:51.250][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 23:28:51.251][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 23:28:51.251][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Sep 25 23:28:51.251][operators.go: 132]   CSV: verticalpodautoscaler.v4.13.0-202306070816 
+[36mINFO   [0m[Sep 25 23:28:51.289][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Sep 25 23:28:51.327][operators.go: 185] Getting installplans for op verticalpodautoscaler.v4.13.0-202306070816 (subs verticalpodautoscaler-v4-13-0-202306070816-sub ns test) 
+[36mINFO   [0m[Sep 25 23:28:51.328][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Sep 25 23:28:51.328][provider.go: 302] Completed the test environment build process in 4.59 seconds 
+[33mWARNING[0m[Sep 25 23:28:51.339][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695684509[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Sep 25 23:33:52.361][phasecheck.go: 50] Timeout waiting for operator csv: verticalpodautoscaler.v4.13.0-202306070816 ns: test to be ready 

@@ -1,0 +1,167 @@
+time="2023-08-23T14:53:54Z" level=info msg="Saving environment variables & parameters."
+time="2023-08-23T14:53:54Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Aug 23 14:53:54.243][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Aug 23 14:53:54.245][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Aug 23 14:53:54.245][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Aug 23 14:53:54.245][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Aug 23 14:53:54.245][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Aug 23 14:53:54.245][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Aug 23 14:53:54.717][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Aug 23 14:53:54.725][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Aug 23 14:53:54.809][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Aug 23 14:53:54.809][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Aug 23 14:53:54.810][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Aug 23 14:53:54.810][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Aug 23 14:53:54.926][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 14:53:54.926][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:54.926][autodiscover_operators.go: 146]  Subscriptions name: odr-cluster-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:54.995][autodiscover_operators.go: 121] Found 3 CSVs:                                
+[36mINFO   [0m[Aug 23 14:53:54.995][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 14:53:54.995][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:54.995][autodiscover_operators.go: 123]  CSV name: odr-cluster-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:56.848][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Aug 23 14:53:56.848][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:56.848][autodiscover_operators.go: 93]  CSV name: odr-cluster-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:56.882][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 14:53:56.882][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:56.882][autodiscover_operators.go: 146]  Subscriptions name: odr-cluster-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:53:56.993][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Aug 23 14:53:57.085][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Aug 23 14:53:57.122][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Aug 23 14:53:57.123][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Aug 23 14:53:57.423][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Aug 23 14:53:57.584][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Aug 23 14:53:57.584][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Aug 23 14:53:57.584][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 14:53:57.584][operators.go: 132]   CSV: odr-cluster-operator.v4.13.0-rhodf    
+[36mINFO   [0m[Aug 23 14:53:57.624][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 14:53:57.662][operators.go: 185] Getting installplans for op odr-cluster-operator.v4.13.0-rhodf (subs odr-cluster-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Aug 23 14:53:57.662][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 14:53:57.663][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Aug 23 14:53:57.663][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 14:53:57.746][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 14:53:57.811][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 14:53:57.871][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 14:53:57.931][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 14:53:57.990][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[31mERROR  [0m[Aug 23 14:53:58.054][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.054][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.054][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.054][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.056][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.056][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.056][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.056][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.057][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.057][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.057][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.057][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Aug 23 14:53:58.061][provider.go: 341] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 14:53:58.061][provider.go: 357] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 14:53:58.061][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 14:53:58.061][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 14:53:58.062][provider.go: 341] container: extract pod: 799cd70363ee0657986df501d5fba09d42089b6ca5c3c54b453695f4c3znvd4 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 14:53:58.062][provider.go: 357] container: extract pod: 799cd70363ee0657986df501d5fba09d42089b6ca5c3c54b453695f4c3znvd4 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Aug 23 14:53:58.062][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.062][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.062][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.062][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.063][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.063][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.064][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.064][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.064][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.064][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.064][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:53:58.064][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[36mINFO   [0m[Aug 23 14:53:58.066][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Aug 23 14:53:58.066][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 14:53:58.066][operators.go: 132]   CSV: odr-cluster-operator.v4.13.0-rhodf    
+[36mINFO   [0m[Aug 23 14:53:58.101][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 14:53:58.134][operators.go: 185] Getting installplans for op odr-cluster-operator.v4.13.0-rhodf (subs odr-cluster-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 14:53:58.134][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Aug 23 14:53:58.135][provider.go: 302] Completed the test environment build process in 3.42 seconds 
+[33mWARNING[0m[Aug 23 14:54:08.598][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Aug 23 14:54:08.598][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Aug 23 14:54:08.599][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Aug 23 14:54:08.599][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Aug 23 14:54:08.719][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 14:54:08.719][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:08.719][autodiscover_operators.go: 146]  Subscriptions name: odr-cluster-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:08.806][autodiscover_operators.go: 121] Found 3 CSVs:                                
+[36mINFO   [0m[Aug 23 14:54:08.806][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 14:54:08.806][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:08.806][autodiscover_operators.go: 123]  CSV name: odr-cluster-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:10.719][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Aug 23 14:54:10.719][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:10.719][autodiscover_operators.go: 93]  CSV name: odr-cluster-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:10.759][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 14:54:10.759][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:10.759][autodiscover_operators.go: 146]  Subscriptions name: odr-cluster-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 14:54:10.876][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Aug 23 14:54:10.970][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Aug 23 14:54:11.006][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Aug 23 14:54:11.007][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Aug 23 14:54:11.299][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Aug 23 14:54:11.482][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Aug 23 14:54:11.482][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Aug 23 14:54:11.483][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 14:54:11.483][operators.go: 132]   CSV: odr-cluster-operator.v4.13.0-rhodf    
+[36mINFO   [0m[Aug 23 14:54:11.523][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 14:54:11.562][operators.go: 185] Getting installplans for op odr-cluster-operator.v4.13.0-rhodf (subs odr-cluster-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Aug 23 14:54:11.562][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 14:54:11.563][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Aug 23 14:54:11.563][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 14:54:11.646][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 14:54:11.713][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 14:54:11.779][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 14:54:11.839][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 14:54:11.899][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[31mERROR  [0m[Aug 23 14:54:11.961][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.961][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.961][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.961][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.963][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.963][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.963][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.963][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.964][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.964][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.964][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.964][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Aug 23 14:54:11.967][provider.go: 341] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 14:54:11.967][provider.go: 357] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 14:54:11.968][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 14:54:11.968][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 14:54:11.968][provider.go: 341] container: extract pod: 799cd70363ee0657986df501d5fba09d42089b6ca5c3c54b453695f4c3znvd4 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 14:54:11.968][provider.go: 357] container: extract pod: 799cd70363ee0657986df501d5fba09d42089b6ca5c3c54b453695f4c3znvd4 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Aug 23 14:54:11.969][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.969][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.969][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.969][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.970][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.970][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.970][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.971][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.971][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.971][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.971][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 23 14:54:11.971][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[36mINFO   [0m[Aug 23 14:54:11.973][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Aug 23 14:54:11.973][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 14:54:11.973][operators.go: 132]   CSV: odr-cluster-operator.v4.13.0-rhodf    
+[36mINFO   [0m[Aug 23 14:54:12.010][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 14:54:12.044][operators.go: 185] Getting installplans for op odr-cluster-operator.v4.13.0-rhodf (subs odr-cluster-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 14:54:12.044][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Aug 23 14:54:12.044][provider.go: 302] Completed the test environment build process in 3.52 seconds 
+[33mWARNING[0m[Aug 23 14:54:12.053][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1692802433[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Aug 23 14:59:12.103][phasecheck.go: 50] Timeout waiting for operator csv: odr-cluster-operator.v4.13.0-rhodf ns: test to be ready 

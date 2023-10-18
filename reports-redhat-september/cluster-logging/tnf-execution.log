@@ -1,0 +1,287 @@
+time="2023-09-25T18:16:54Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T18:16:54Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 18:16:54.778][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 18:16:54.781][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 18:16:54.781][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 18:16:54.781][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 18:16:54.781][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 18:16:54.782][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 18:16:55.215][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 18:16:55.223][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 18:16:55.302][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 18:16:55.302][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 18:16:55.302][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 18:16:55.302][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 18:16:55.416][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 18:16:55.417][autodiscover_operators.go: 146]  Subscriptions name: cluster-logging-v5-7-2-sub (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:55.417][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:56.145][autodiscover_operators.go: 121] Found 83 CSVs:                               
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: default) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.146][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.147][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 18:16:56.148][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 18:16:56.149][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: cluster-logging.v5.7.2 (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:56.150][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 18:16:58.185][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 18:16:58.185][autodiscover_operators.go: 93]  CSV name: cluster-logging.v5.7.2 (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:58.185][autodiscover_operators.go: 93]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:58.226][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 18:16:58.226][autodiscover_operators.go: 146]  Subscriptions name: cluster-logging-v5-7-2-sub (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:58.226][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 18:16:58.350][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 18:16:58.448][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 18:16:58.490][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 18:16:58.491][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 18:16:58.824][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 18:16:58.998][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Sep 25 18:16:58.998][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 18:16:58.998][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 18:16:58.998][operators.go: 132]   CSV: cluster-logging.v5.7.2                
+[36mINFO   [0m[Sep 25 18:16:59.037][operators.go: 185] Getting installplans for op cluster-logging.v5.7.2 (subs cluster-logging-v5-7-2-sub ns test) 
+[33mWARNING[0m[Sep 25 18:16:59.038][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 18:16:59.038][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 18:16:59.068][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 18:16:59.069][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 18:16:59.174][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 18:16:59.247][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 18:16:59.313][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 18:16:59.379][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 18:16:59.442][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[33mWARNING[0m[Sep 25 18:16:59.510][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:16:59.510][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:16:59.510][provider.go: 341] container: extract pod: 40c2a140a6bc57cf0df6901bb72e42688cc20f2584ecc8606ee06ef05atkml6 ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:16:59.510][provider.go: 357] container: extract pod: 40c2a140a6bc57cf0df6901bb72e42688cc20f2584ecc8606ee06ef05atkml6 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:16:59.511][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:16:59.511][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:16:59.511][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:16:59.512][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:16:59.512][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:16:59.512][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 18:16:59.513][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 18:16:59.513][operators.go: 132]   CSV: cluster-logging.v5.7.2                
+[36mINFO   [0m[Sep 25 18:16:59.513][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 18:16:59.548][operators.go: 185] Getting installplans for op cluster-logging.v5.7.2 (subs cluster-logging-v5-7-2-sub ns test) 
+[36mINFO   [0m[Sep 25 18:16:59.586][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 18:16:59.586][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Sep 25 18:16:59.587][provider.go: 302] Completed the test environment build process in 4.37 seconds 
+[33mWARNING[0m[Sep 25 18:17:11.689][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 18:17:11.689][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 18:17:11.689][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 18:17:11.689][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 18:17:11.831][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 18:17:11.831][autodiscover_operators.go: 146]  Subscriptions name: cluster-logging-v5-7-2-sub (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:11.832][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 121] Found 83 CSVs:                               
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: default) 
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-eventing) 
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: knative-serving) 
+[36mINFO   [0m[Sep 25 18:17:12.661][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 18:17:12.662][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 18:17:12.663][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 18:17:12.664][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: cluster-logging.v5.7.2 (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:12.665][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:12.666][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 18:17:14.734][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 18:17:14.734][autodiscover_operators.go: 93]  CSV name: cluster-logging.v5.7.2 (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:14.734][autodiscover_operators.go: 93]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:14.804][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 18:17:14.804][autodiscover_operators.go: 146]  Subscriptions name: cluster-logging-v5-7-2-sub (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:14.804][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test (ns: test) 
+[36mINFO   [0m[Sep 25 18:17:14.933][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 18:17:15.032][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 18:17:15.074][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 18:17:15.074][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 18:17:15.410][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 18:17:15.575][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Sep 25 18:17:15.575][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 18:17:15.575][operators.go: 132]   CSV: cluster-logging.v5.7.2                
+[36mINFO   [0m[Sep 25 18:17:15.575][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 18:17:15.613][operators.go: 185] Getting installplans for op cluster-logging.v5.7.2 (subs cluster-logging-v5-7-2-sub ns test) 
+[33mWARNING[0m[Sep 25 18:17:15.614][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 18:17:15.614][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 18:17:15.651][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 18:17:15.652][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 18:17:15.756][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 18:17:15.831][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 18:17:15.901][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 18:17:15.966][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 18:17:16.033][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[33mWARNING[0m[Sep 25 18:17:16.113][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:17:16.113][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:17:16.113][provider.go: 341] container: extract pod: 40c2a140a6bc57cf0df6901bb72e42688cc20f2584ecc8606ee06ef05atkml6 ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:17:16.113][provider.go: 357] container: extract pod: 40c2a140a6bc57cf0df6901bb72e42688cc20f2584ecc8606ee06ef05atkml6 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:17:16.113][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:17:16.114][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:17:16.114][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:17:16.114][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 18:17:16.114][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 18:17:16.114][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 18:17:16.115][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 18:17:16.115][operators.go: 132]   CSV: cluster-logging.v5.7.2                
+[36mINFO   [0m[Sep 25 18:17:16.115][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Sep 25 18:17:16.154][operators.go: 185] Getting installplans for op cluster-logging.v5.7.2 (subs cluster-logging-v5-7-2-sub ns test) 
+[36mINFO   [0m[Sep 25 18:17:16.192][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-operator-sdk-run-bundle-self-node-remediation-catalog-test ns test) 
+[36mINFO   [0m[Sep 25 18:17:16.192][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Sep 25 18:17:16.192][provider.go: 302] Completed the test environment build process in 4.57 seconds 
+[33mWARNING[0m[Sep 25 18:17:16.205][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695665814[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Sep 25 18:22:16.313][phasecheck.go: 50] Timeout waiting for operator csv: cluster-logging.v5.7.2 ns: test to be ready 

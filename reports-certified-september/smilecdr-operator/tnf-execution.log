@@ -1,0 +1,155 @@
+time="2023-09-25T05:51:03Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T05:51:03Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 05:51:03.318][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 05:51:03.320][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 05:51:03.320][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 05:51:03.320][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 05:51:03.320][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 05:51:03.320][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 05:51:03.730][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 05:51:03.737][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 05:51:03.838][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 05:51:03.838][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 05:51:03.838][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 05:51:03.838][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 05:51:03.950][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:51:03.950][autodiscover_operators.go: 146]  Subscriptions name: smilecdr-operator-v0-0-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:04.002][autodiscover_operators.go: 121] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 05:51:04.003][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:51:04.003][autodiscover_operators.go: 123]  CSV name: smilecdr-operator.v0.0.1 (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:06.297][autodiscover_operators.go: 91] Found 1 CSVs:                                
+[36mINFO   [0m[Sep 25 05:51:06.298][autodiscover_operators.go: 93]  CSV name: smilecdr-operator.v0.0.1 (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:06.336][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:51:06.336][autodiscover_operators.go: 146]  Subscriptions name: smilecdr-operator-v0-0-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:06.455][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 05:51:06.567][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 05:51:06.612][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 05:51:06.613][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 05:51:06.927][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 05:51:07.094][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:51:07.094][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 05:51:07.094][operators.go: 132]   CSV: smilecdr-operator.v0.0.1              
+[33mWARNING[0m[Sep 25 05:51:07.095][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:51:07.095][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 05:51:07.127][operators.go: 185] Getting installplans for op smilecdr-operator.v0.0.1 (subs smilecdr-operator-v0-0-1-sub ns test) 
+[36mINFO   [0m[Sep 25 05:51:07.128][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:51:07.217][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:51:07.287][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:51:07.348][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:51:07.427][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:51:07.486][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 05:51:07.548][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.548][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.549][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.549][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.549][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.549][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.551][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.551][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.551][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.551][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.552][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.552][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:51:07.555][provider.go: 341] container: extract pod: 13b10127dcd523fb441c45fcf9e9cc354bd4cacb13d52dae88791f3d29djgm5 ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:07.555][provider.go: 357] container: extract pod: 13b10127dcd523fb441c45fcf9e9cc354bd4cacb13d52dae88791f3d29djgm5 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:51:07.556][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:07.556][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 05:51:07.556][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.556][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.556][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.556][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.556][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.556][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.557][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.557][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.557][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.557][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.558][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:07.558][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:51:07.559][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:07.559][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:51:07.559][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:07.559][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 05:51:07.560][operators.go: 130] Found 1 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:51:07.560][operators.go: 132]   CSV: smilecdr-operator.v0.0.1              
+[36mINFO   [0m[Sep 25 05:51:07.595][operators.go: 185] Getting installplans for op smilecdr-operator.v0.0.1 (subs smilecdr-operator-v0-0-1-sub ns test) 
+[36mINFO   [0m[Sep 25 05:51:07.595][provider.go: 290] Operators found: 1                           
+[36mINFO   [0m[Sep 25 05:51:07.595][provider.go: 302] Completed the test environment build process in 3.86 seconds 
+[33mWARNING[0m[Sep 25 05:51:18.751][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 05:51:18.751][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 05:51:18.751][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 05:51:18.751][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 05:51:18.886][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:51:18.886][autodiscover_operators.go: 146]  Subscriptions name: smilecdr-operator-v0-0-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:18.966][autodiscover_operators.go: 121] Found 2 CSVs:                                
+[36mINFO   [0m[Sep 25 05:51:18.966][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:51:18.966][autodiscover_operators.go: 123]  CSV name: smilecdr-operator.v0.0.1 (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:21.225][autodiscover_operators.go: 91] Found 1 CSVs:                                
+[36mINFO   [0m[Sep 25 05:51:21.226][autodiscover_operators.go: 93]  CSV name: smilecdr-operator.v0.0.1 (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:21.266][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:51:21.266][autodiscover_operators.go: 146]  Subscriptions name: smilecdr-operator-v0-0-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:51:21.391][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 05:51:21.495][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 05:51:21.538][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 05:51:21.539][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 05:51:21.875][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 05:51:22.047][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:51:22.047][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 05:51:22.047][operators.go: 132]   CSV: smilecdr-operator.v0.0.1              
+[33mWARNING[0m[Sep 25 05:51:22.048][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:51:22.048][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 05:51:22.093][operators.go: 185] Getting installplans for op smilecdr-operator.v0.0.1 (subs smilecdr-operator-v0-0-1-sub ns test) 
+[36mINFO   [0m[Sep 25 05:51:22.094][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:51:22.192][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:51:22.265][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:51:22.343][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:51:22.413][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:51:22.480][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 05:51:22.545][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.545][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.545][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.545][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.546][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.546][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.547][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.547][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.548][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.548][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.548][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.548][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:51:22.551][provider.go: 341] container: extract pod: 13b10127dcd523fb441c45fcf9e9cc354bd4cacb13d52dae88791f3d29djgm5 ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:22.551][provider.go: 357] container: extract pod: 13b10127dcd523fb441c45fcf9e9cc354bd4cacb13d52dae88791f3d29djgm5 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:51:22.552][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:22.552][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 05:51:22.552][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.552][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.552][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.552][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.553][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.553][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.554][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.554][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.554][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.554][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.554][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:51:22.554][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:51:22.555][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:22.555][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:51:22.556][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:51:22.556][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 05:51:22.557][operators.go: 130] Found 1 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:51:22.557][operators.go: 132]   CSV: smilecdr-operator.v0.0.1              
+[36mINFO   [0m[Sep 25 05:51:22.593][operators.go: 185] Getting installplans for op smilecdr-operator.v0.0.1 (subs smilecdr-operator-v0-0-1-sub ns test) 
+[36mINFO   [0m[Sep 25 05:51:22.594][provider.go: 290] Operators found: 1                           
+[36mINFO   [0m[Sep 25 05:51:22.594][provider.go: 302] Completed the test environment build process in 3.92 seconds 
+[33mWARNING[0m[Sep 25 05:51:22.603][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695621062[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Sep 25 05:56:22.953][phasecheck.go: 50] Timeout waiting for operator csv: smilecdr-operator.v0.0.1 ns: test to be ready 

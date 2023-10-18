@@ -1,0 +1,459 @@
+time="2023-08-24T19:38:02Z" level=info msg="Saving environment variables & parameters."
+time="2023-08-24T19:38:02Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Aug 24 19:38:02.246][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Aug 24 19:38:02.247][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Aug 24 19:38:02.248][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Aug 24 19:38:02.248][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Aug 24 19:38:02.248][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Aug 24 19:38:02.248][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Aug 24 19:38:02.703][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Aug 24 19:38:02.709][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Aug 24 19:38:02.789][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Aug 24 19:38:02.789][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Aug 24 19:38:02.790][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Aug 24 19:38:02.790][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Aug 24 19:38:02.895][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 24 19:38:02.896][autodiscover_operators.go: 146]  Subscriptions name: infoscale-licensing-operator-v8-0-110-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:02.896][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-v0-6-1-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 121] Found 149 CSVs:                              
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: cert-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cert-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: cnf-suite) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cnf-suite) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: default) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: default) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: kube-node-lease) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-node-lease) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: kube-public) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-public) 
+[36mINFO   [0m[Aug 24 19:38:03.931][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: kube-system) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-system) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-authentication) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Aug 24 19:38:03.932][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-config-managed) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-managed) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-config) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-console-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.933][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-console) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-dns) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-etcd) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-host-network) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-host-network) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-image-registry) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-image-registry) 
+[36mINFO   [0m[Aug 24 19:38:03.934][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ingress) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-insights) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-insights) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.935][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-machine-api) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-api) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.936][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-marketplace) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-marketplace) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-multus) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-multus) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-network-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-node) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-node) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.937][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-operators) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operators) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-service-ca) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:03.938][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: rhods-notebooks) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: rhods-notebooks) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: ztp-install) 
+[36mINFO   [0m[Aug 24 19:38:03.939][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: ztp-install) 
+[36mINFO   [0m[Aug 24 19:38:06.211][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Aug 24 19:38:06.211][autodiscover_operators.go: 93]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:06.211][autodiscover_operators.go: 93]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:06.249][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 24 19:38:06.249][autodiscover_operators.go: 146]  Subscriptions name: infoscale-licensing-operator-v8-0-110-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:06.249][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-v0-6-1-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:06.372][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Aug 24 19:38:06.473][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Aug 24 19:38:06.510][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Aug 24 19:38:06.511][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Aug 24 19:38:06.806][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Aug 24 19:38:06.971][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Aug 24 19:38:06.971][operators.go: 132]   CSV: infoscale-licensing-operator.v8.0.110 
+[36mINFO   [0m[Aug 24 19:38:06.971][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Aug 24 19:38:06.971][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Aug 24 19:38:07.014][operators.go: 185] Getting installplans for op infoscale-licensing-operator.v8.0.110 (subs infoscale-licensing-operator-v8-0-110-sub ns test) 
+[33mWARNING[0m[Aug 24 19:38:07.015][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:07.016][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Aug 24 19:38:07.055][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-v0-6-1-sub ns test) 
+[36mINFO   [0m[Aug 24 19:38:07.056][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-4d7f2d5d759a3f0196274c4702ff2d3a 
+[36mINFO   [0m[Aug 24 19:38:07.148][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-264a3e0d880b40507d6aa6d24e9b1296 
+[36mINFO   [0m[Aug 24 19:38:07.216][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-264a3e0d880b40507d6aa6d24e9b1296 
+[36mINFO   [0m[Aug 24 19:38:07.281][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-4d7f2d5d759a3f0196274c4702ff2d3a 
+[36mINFO   [0m[Aug 24 19:38:07.384][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-4d7f2d5d759a3f0196274c4702ff2d3a 
+[36mINFO   [0m[Aug 24 19:38:07.445][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-264a3e0d880b40507d6aa6d24e9b1296 
+[31mERROR  [0m[Aug 24 19:38:07.508][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.508][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.509][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.509][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.509][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.509][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.511][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.511][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.512][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.512][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.512][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.513][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Aug 24 19:38:07.518][provider.go: 341] container: extract pod: 18fefe1fd8ed7648c659491a86dd4f69a628774316ab6ef0c833e9dfc0ktnn2 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 24 19:38:07.518][provider.go: 357] container: extract pod: 18fefe1fd8ed7648c659491a86dd4f69a628774316ab6ef0c833e9dfc0ktnn2 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Aug 24 19:38:07.518][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.519][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.519][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.519][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.519][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.519][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.520][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.520][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.521][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.521][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.521][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:07.521][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Aug 24 19:38:07.522][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Aug 24 19:38:07.522][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 24 19:38:07.523][provider.go: 341] container: manager pod: infoscale-licensing-operator-597476786c-9w6zh ns: test is not ready yet. 
+[33mWARNING[0m[Aug 24 19:38:07.523][provider.go: 357] container: manager pod: infoscale-licensing-operator-597476786c-9w6zh ns: test is not running (reason: waiting - PodInitializing, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Aug 24 19:38:07.525][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Aug 24 19:38:07.525][operators.go: 132]   CSV: infoscale-licensing-operator.v8.0.110 
+[36mINFO   [0m[Aug 24 19:38:07.525][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Aug 24 19:38:07.559][operators.go: 185] Getting installplans for op infoscale-licensing-operator.v8.0.110 (subs infoscale-licensing-operator-v8-0-110-sub ns test) 
+[36mINFO   [0m[Aug 24 19:38:07.593][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-v0-6-1-sub ns test) 
+[36mINFO   [0m[Aug 24 19:38:07.593][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Aug 24 19:38:07.593][provider.go: 302] Completed the test environment build process in 4.89 seconds 
+[33mWARNING[0m[Aug 24 19:38:18.159][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Aug 24 19:38:18.159][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Aug 24 19:38:18.159][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Aug 24 19:38:18.159][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Aug 24 19:38:18.286][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 24 19:38:18.286][autodiscover_operators.go: 146]  Subscriptions name: infoscale-licensing-operator-v8-0-110-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:18.286][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-v0-6-1-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:19.441][autodiscover_operators.go: 121] Found 149 CSVs:                              
+[36mINFO   [0m[Aug 24 19:38:19.441][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: cert-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cert-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: cnf-suite) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: cnf-suite) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: default) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: default) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: kube-node-lease) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-node-lease) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: kube-public) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-public) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: kube-system) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: kube-system) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:19.442][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-authentication) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-authentication) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.443][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-config-managed) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-managed) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-config) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-config) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-console-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-console) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-console) 
+[36mINFO   [0m[Aug 24 19:38:19.444][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-dns) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-dns) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-etcd) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-etcd) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-host-network) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-host-network) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-image-registry) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-image-registry) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Aug 24 19:38:19.445][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ingress) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ingress) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-insights) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-insights) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Aug 24 19:38:19.446][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-machine-api) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-api) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-marketplace) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-marketplace) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-multus) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-multus) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Aug 24 19:38:19.447][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-network-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-network-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-node) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-node) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-operators) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-operators) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.448][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-service-ca) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-service-ca) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: openshift) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: openshift) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: rhods-notebooks) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: rhods-notebooks) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: ztp-install) 
+[36mINFO   [0m[Aug 24 19:38:19.449][autodiscover_operators.go: 123]  CSV name: self-node-remediation.v0.6.1 (ns: ztp-install) 
+[36mINFO   [0m[Aug 24 19:38:21.758][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Aug 24 19:38:21.758][autodiscover_operators.go: 93]  CSV name: infoscale-licensing-operator.v8.0.110 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:21.758][autodiscover_operators.go: 93]  CSV name: self-node-remediation.v0.6.1 (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:21.798][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 24 19:38:21.798][autodiscover_operators.go: 146]  Subscriptions name: infoscale-licensing-operator-v8-0-110-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:21.798][autodiscover_operators.go: 146]  Subscriptions name: self-node-remediation-v0-6-1-sub (ns: test) 
+[36mINFO   [0m[Aug 24 19:38:21.909][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Aug 24 19:38:22.004][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Aug 24 19:38:22.042][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Aug 24 19:38:22.042][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Aug 24 19:38:22.338][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Aug 24 19:38:22.525][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Aug 24 19:38:22.525][operators.go: 132]   CSV: infoscale-licensing-operator.v8.0.110 
+[36mINFO   [0m[Aug 24 19:38:22.526][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Aug 24 19:38:22.526][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Aug 24 19:38:22.559][operators.go: 185] Getting installplans for op infoscale-licensing-operator.v8.0.110 (subs infoscale-licensing-operator-v8-0-110-sub ns test) 
+[33mWARNING[0m[Aug 24 19:38:22.559][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 24 19:38:22.560][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Aug 24 19:38:22.593][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-v0-6-1-sub ns test) 
+[36mINFO   [0m[Aug 24 19:38:22.594][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-4d7f2d5d759a3f0196274c4702ff2d3a 
+[36mINFO   [0m[Aug 24 19:38:22.671][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-264a3e0d880b40507d6aa6d24e9b1296 
+[36mINFO   [0m[Aug 24 19:38:22.739][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-264a3e0d880b40507d6aa6d24e9b1296 
+[36mINFO   [0m[Aug 24 19:38:22.804][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-4d7f2d5d759a3f0196274c4702ff2d3a 
+[36mINFO   [0m[Aug 24 19:38:22.876][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-4d7f2d5d759a3f0196274c4702ff2d3a 
+[36mINFO   [0m[Aug 24 19:38:22.938][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-264a3e0d880b40507d6aa6d24e9b1296 
+[31mERROR  [0m[Aug 24 19:38:23.003][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.003][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.003][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.004][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.004][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.004][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.006][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.006][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.006][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.007][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.007][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.007][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Aug 24 19:38:23.013][provider.go: 341] container: extract pod: 18fefe1fd8ed7648c659491a86dd4f69a628774316ab6ef0c833e9dfc0ktnn2 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 24 19:38:23.013][provider.go: 357] container: extract pod: 18fefe1fd8ed7648c659491a86dd4f69a628774316ab6ef0c833e9dfc0ktnn2 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Aug 24 19:38:23.013][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.013][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.014][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.014][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.014][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.014][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.015][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.015][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.015][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.015][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.016][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Aug 24 19:38:23.016][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Aug 24 19:38:23.017][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Aug 24 19:38:23.017][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 24 19:38:23.018][provider.go: 341] container: manager pod: infoscale-licensing-operator-597476786c-9w6zh ns: test is not ready yet. 
+[33mWARNING[0m[Aug 24 19:38:23.018][provider.go: 357] container: manager pod: infoscale-licensing-operator-597476786c-9w6zh ns: test is not running (reason: waiting - PodInitializing, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Aug 24 19:38:23.019][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Aug 24 19:38:23.019][operators.go: 132]   CSV: infoscale-licensing-operator.v8.0.110 
+[36mINFO   [0m[Aug 24 19:38:23.019][operators.go: 132]   CSV: self-node-remediation.v0.6.1          
+[36mINFO   [0m[Aug 24 19:38:23.058][operators.go: 185] Getting installplans for op infoscale-licensing-operator.v8.0.110 (subs infoscale-licensing-operator-v8-0-110-sub ns test) 
+[36mINFO   [0m[Aug 24 19:38:23.094][operators.go: 185] Getting installplans for op self-node-remediation.v0.6.1 (subs self-node-remediation-v0-6-1-sub ns test) 
+[36mINFO   [0m[Aug 24 19:38:23.094][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Aug 24 19:38:23.094][provider.go: 302] Completed the test environment build process in 5.01 seconds 
+[33mWARNING[0m[Aug 24 19:38:23.102][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1692905881[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Aug 24 19:43:23.879][phasecheck.go: 50] Timeout waiting for operator csv: infoscale-licensing-operator.v8.0.110 ns: test to be ready 

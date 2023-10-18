@@ -1,0 +1,319 @@
+time="2023-09-25T05:33:14Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T05:33:14Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 05:33:14.365][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 05:33:14.367][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 05:33:14.367][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 05:33:14.367][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 05:33:14.367][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 05:33:14.367][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 05:33:14.817][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 05:33:14.824][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 05:33:14.909][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 05:33:14.909][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 05:33:14.909][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 05:33:14.910][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 05:33:15.019][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:33:15.020][autodiscover_operators.go: 146]  Subscriptions name: ibm-application-gateway-operator-v22-3-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:15.430][autodiscover_operators.go: 121] Found 80 CSVs:                               
+[36mINFO   [0m[Sep 25 05:33:15.430][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.430][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: default) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.431][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.432][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 05:33:15.433][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 05:33:15.434][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 05:33:15.435][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 05:33:15.435][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:15.435][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 05:33:17.991][autodiscover_operators.go: 91] Found 1 CSVs:                                
+[36mINFO   [0m[Sep 25 05:33:17.991][autodiscover_operators.go: 93]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:18.035][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:33:18.035][autodiscover_operators.go: 146]  Subscriptions name: ibm-application-gateway-operator-v22-3-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:18.160][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 05:33:18.273][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 05:33:18.315][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 05:33:18.316][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 05:33:18.644][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 05:33:18.815][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:33:18.815][operators.go: 132]   CSV: ibm-application-gateway-operator.v22.3.0 
+[36mINFO   [0m[Sep 25 05:33:18.815][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 05:33:18.852][operators.go: 185] Getting installplans for op ibm-application-gateway-operator.v22.3.0 (subs ibm-application-gateway-operator-v22-3-0-sub ns test) 
+[33mWARNING[0m[Sep 25 05:33:18.853][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:33:18.853][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 05:33:18.854][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:33:18.942][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:33:19.013][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:33:19.079][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:33:19.148][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:33:19.209][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 05:33:19.276][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.276][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.277][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.277][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.277][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.277][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.279][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.279][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.279][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.280][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.280][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.280][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:33:19.283][provider.go: 341] container: extract pod: 0041e5e523649ba01cf4019d2c26ac311a4a18eacd0b9c013d2e1678fctmddq ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:19.283][provider.go: 357] container: extract pod: 0041e5e523649ba01cf4019d2c26ac311a4a18eacd0b9c013d2e1678fctmddq ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:19.284][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:19.284][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:19.284][provider.go: 341] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:19.284][provider.go: 357] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 05:33:19.284][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.285][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.285][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.285][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.285][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.285][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.286][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.286][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.286][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.286][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.286][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:19.286][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:33:19.287][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:19.288][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:19.288][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:19.288][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:19.288][provider.go: 341] container: manager pod: ibm-application-gateway-operator-controller-manager-58b88f76n4q ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:19.288][provider.go: 357] container: manager pod: ibm-application-gateway-operator-controller-manager-58b88f76n4q ns: test is not running (reason: waiting - ImagePullBackOff, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 05:33:19.289][operators.go: 130] Found 1 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:33:19.289][operators.go: 132]   CSV: ibm-application-gateway-operator.v22.3.0 
+[36mINFO   [0m[Sep 25 05:33:19.324][operators.go: 185] Getting installplans for op ibm-application-gateway-operator.v22.3.0 (subs ibm-application-gateway-operator-v22-3-0-sub ns test) 
+[36mINFO   [0m[Sep 25 05:33:19.324][provider.go: 290] Operators found: 1                           
+[36mINFO   [0m[Sep 25 05:33:19.325][provider.go: 302] Completed the test environment build process in 4.51 seconds 
+[33mWARNING[0m[Sep 25 05:33:30.755][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 05:33:30.756][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 05:33:30.756][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 05:33:30.756][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 05:33:30.893][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:33:30.893][autodiscover_operators.go: 146]  Subscriptions name: ibm-application-gateway-operator-v22-3-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 121] Found 80 CSVs:                               
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: cert-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: cnf-suite) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: default) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: kube-node-lease) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: kube-public) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: kube-system) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-apiserver-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-apiserver) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-authentication-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-authentication) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-credential-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.362][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cloud-network-config-controller) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-csi-drivers) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-machine-approver) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-node-tuning-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-samples-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-storage-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-cluster-version) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-config-managed) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-config-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-config) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-console-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-console-user-settings) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-console) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-dns-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-dns) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-etcd-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-etcd) 
+[36mINFO   [0m[Sep 25 05:33:31.363][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-host-network) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-image-registry) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-infra) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ingress-canary) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ingress-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ingress) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-insights) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kni-infra) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-apiserver-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-apiserver) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-controller-manager-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-scheduler-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-scheduler) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-storage-version-migrator-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-kube-storage-version-migrator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-machine-api) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-machine-config-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-marketplace) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-monitoring) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-multus) 
+[36mINFO   [0m[Sep 25 05:33:31.364][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-must-gather-6fjzt) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-must-gather-npvwx) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-network-diagnostics) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-network-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-node) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-nutanix-infra) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-oauth-apiserver) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-openstack-infra) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-operators) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ovirt-infra) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-ovn-kubernetes) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-route-controller-manager) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-service-ca-operator) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-service-ca) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-user-workload-monitoring) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift-vsphere-infra) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: openshift) 
+[36mINFO   [0m[Sep 25 05:33:31.365][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: pipeline-alerts) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: redhat-ods-applications) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: redhat-ods-monitoring) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: rhods-notebooks) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: tekton-pipelines-resolvers) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: tekton-pipelines) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:31.366][autodiscover_operators.go: 123]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: ztp-install) 
+[36mINFO   [0m[Sep 25 05:33:33.810][autodiscover_operators.go: 91] Found 1 CSVs:                                
+[36mINFO   [0m[Sep 25 05:33:33.810][autodiscover_operators.go: 93]  CSV name: ibm-application-gateway-operator.v22.3.0 (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:33.854][autodiscover_operators.go: 144] Found 1 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 05:33:33.855][autodiscover_operators.go: 146]  Subscriptions name: ibm-application-gateway-operator-v22-3-0-sub (ns: test) 
+[36mINFO   [0m[Sep 25 05:33:33.969][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 05:33:34.073][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 05:33:34.113][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 05:33:34.114][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 05:33:34.455][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 05:33:34.625][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:33:34.625][operators.go: 132]   CSV: ibm-application-gateway-operator.v22.3.0 
+[36mINFO   [0m[Sep 25 05:33:34.625][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 05:33:34.660][operators.go: 185] Getting installplans for op ibm-application-gateway-operator.v22.3.0 (subs ibm-application-gateway-operator-v22-3-0-sub ns test) 
+[33mWARNING[0m[Sep 25 05:33:34.660][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 05:33:34.660][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 05:33:34.660][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:33:34.751][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:33:34.828][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 05:33:34.897][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:33:34.967][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 05:33:35.033][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 05:33:35.113][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.114][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.114][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.114][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.114][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.114][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.116][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.116][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.116][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.116][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.117][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.117][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:33:35.120][provider.go: 341] container: extract pod: 0041e5e523649ba01cf4019d2c26ac311a4a18eacd0b9c013d2e1678fctmddq ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:35.120][provider.go: 357] container: extract pod: 0041e5e523649ba01cf4019d2c26ac311a4a18eacd0b9c013d2e1678fctmddq ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:35.120][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:35.120][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:35.121][provider.go: 341] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:35.121][provider.go: 357] container: extract pod: bad2d6671ea70976c64d77118c2b9378d57202296104365774df80d681dwpfd ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 05:33:35.121][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.121][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.121][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.121][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.122][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.122][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.122][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.122][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.123][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.123][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.123][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 05:33:35.123][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 05:33:35.124][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:35.124][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:35.124][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:35.124][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 05:33:35.125][provider.go: 341] container: manager pod: ibm-application-gateway-operator-controller-manager-58b88f76n4q ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 05:33:35.125][provider.go: 357] container: manager pod: ibm-application-gateway-operator-controller-manager-58b88f76n4q ns: test is not running (reason: waiting - ErrImagePull, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 05:33:35.126][operators.go: 130] Found 1 unique CSVs                          
+[36mINFO   [0m[Sep 25 05:33:35.126][operators.go: 132]   CSV: ibm-application-gateway-operator.v22.3.0 
+[36mINFO   [0m[Sep 25 05:33:35.162][operators.go: 185] Getting installplans for op ibm-application-gateway-operator.v22.3.0 (subs ibm-application-gateway-operator-v22-3-0-sub ns test) 
+[36mINFO   [0m[Sep 25 05:33:35.162][provider.go: 290] Operators found: 1                           
+[36mINFO   [0m[Sep 25 05:33:35.162][provider.go: 302] Completed the test environment build process in 4.48 seconds 
+[33mWARNING[0m[Sep 25 05:33:35.172][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695619993[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Sep 25 05:38:36.273][phasecheck.go: 50] Timeout waiting for operator csv: ibm-application-gateway-operator.v22.3.0 ns: test to be ready 

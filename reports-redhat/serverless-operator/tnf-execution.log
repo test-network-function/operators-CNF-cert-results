@@ -1,0 +1,190 @@
+time="2023-08-23T17:18:55Z" level=info msg="Saving environment variables & parameters."
+time="2023-08-23T17:18:55Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Aug 23 17:18:55.481][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Aug 23 17:18:55.482][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Aug 23 17:18:55.482][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Aug 23 17:18:55.482][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Aug 23 17:18:55.482][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Aug 23 17:18:55.483][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Aug 23 17:18:55.943][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Aug 23 17:18:55.950][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Aug 23 17:18:56.040][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Aug 23 17:18:56.040][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Aug 23 17:18:56.041][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Aug 23 17:18:56.041][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Aug 23 17:18:56.160][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 17:18:56.160][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:56.160][autodiscover_operators.go: 146]  Subscriptions name: serverless-operator-v1-29-0-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:56.234][autodiscover_operators.go: 121] Found 3 CSVs:                                
+[36mINFO   [0m[Aug 23 17:18:56.234][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 17:18:56.234][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:56.235][autodiscover_operators.go: 123]  CSV name: serverless-operator.v1.29.0 (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:58.156][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Aug 23 17:18:58.157][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:58.157][autodiscover_operators.go: 93]  CSV name: serverless-operator.v1.29.0 (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:58.197][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 17:18:58.197][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:58.197][autodiscover_operators.go: 146]  Subscriptions name: serverless-operator-v1-29-0-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:18:58.316][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Aug 23 17:18:58.396][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Aug 23 17:18:58.437][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Aug 23 17:18:58.438][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Aug 23 17:18:58.737][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Aug 23 17:18:58.912][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Aug 23 17:18:58.913][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 17:18:58.913][operators.go: 132]   CSV: serverless-operator.v1.29.0           
+[36mINFO   [0m[Aug 23 17:18:58.913][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Aug 23 17:18:58.955][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Aug 23 17:18:58.955][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 17:18:58.956][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[33mWARNING[0m[Aug 23 17:18:58.956][operators.go: 183] Subscription not found for CSV: serverless-operator.v1.29.0 (ns test) 
+[36mINFO   [0m[Aug 23 17:18:58.956][operators.go: 185] Getting installplans for op serverless-operator.v1.29.0 (subs  ns ) 
+[36mINFO   [0m[Aug 23 17:18:58.957][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 17:18:59.037][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 17:18:59.100][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 17:18:59.164][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 17:18:59.226][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 17:18:59.289][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[33mWARNING[0m[Aug 23 17:18:59.353][provider.go: 341] container: kube-rbac-proxy pod: csi-addons-controller-manager-57cb4fdfc4-j4k29 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:18:59.353][provider.go: 341] container: kube-rbac-proxy pod: csi-addons-controller-manager-57cb4fdfc4-j4k29 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:18:59.354][provider.go: 341] container: extract pod: 1cff878d500f954f67f09b890e56337f3e9339d4173ea419f613fc1012pp55q ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:18:59.354][provider.go: 357] container: extract pod: 1cff878d500f954f67f09b890e56337f3e9339d4173ea419f613fc1012pp55q ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 17:18:59.355][provider.go: 341] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:18:59.355][provider.go: 357] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 17:18:59.356][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:18:59.356][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 17:18:59.356][provider.go: 341] container: kube-rbac-proxy pod: csi-addons-controller-manager-57cb4fdfc4-j4k29 ns: test is not ready yet. 
+[36mINFO   [0m[Aug 23 17:18:59.357][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Aug 23 17:18:59.357][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 17:18:59.357][operators.go: 132]   CSV: serverless-operator.v1.29.0           
+[36mINFO   [0m[Aug 23 17:18:59.393][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Aug 23 17:18:59.393][operators.go: 183] Subscription not found for CSV: serverless-operator.v1.29.0 (ns test) 
+[36mINFO   [0m[Aug 23 17:18:59.393][operators.go: 185] Getting installplans for op serverless-operator.v1.29.0 (subs  ns ) 
+[36mINFO   [0m[Aug 23 17:18:59.393][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Aug 23 17:18:59.394][provider.go: 302] Completed the test environment build process in 3.45 seconds 
+[33mWARNING[0m[Aug 23 17:19:10.618][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Aug 23 17:19:10.618][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Aug 23 17:19:10.618][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Aug 23 17:19:10.618][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Aug 23 17:19:10.744][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 17:19:10.744][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:10.744][autodiscover_operators.go: 146]  Subscriptions name: serverless-operator-v1-29-0-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:10.858][autodiscover_operators.go: 121] Found 3 CSVs:                                
+[36mINFO   [0m[Aug 23 17:19:10.858][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 17:19:10.858][autodiscover_operators.go: 123]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:10.858][autodiscover_operators.go: 123]  CSV name: serverless-operator.v1.29.0 (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:12.748][autodiscover_operators.go: 91] Found 2 CSVs:                                
+[36mINFO   [0m[Aug 23 17:19:12.748][autodiscover_operators.go: 93]  CSV name: odf-csi-addons-operator.v4.13.0-rhodf (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:12.748][autodiscover_operators.go: 93]  CSV name: serverless-operator.v1.29.0 (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:12.786][autodiscover_operators.go: 144] Found 2 subscriptions in the target namespaces 
+[36mINFO   [0m[Aug 23 17:19:12.786][autodiscover_operators.go: 146]  Subscriptions name: odf-csi-addons-operator-v4-13-0-rhodf-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:12.786][autodiscover_operators.go: 146]  Subscriptions name: serverless-operator-v1-29-0-sub (ns: test) 
+[36mINFO   [0m[Aug 23 17:19:12.904][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Aug 23 17:19:12.990][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Aug 23 17:19:13.030][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Aug 23 17:19:13.031][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Aug 23 17:19:13.325][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Aug 23 17:19:13.490][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Aug 23 17:19:13.491][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Aug 23 17:19:13.491][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 17:19:13.491][operators.go: 132]   CSV: serverless-operator.v1.29.0           
+[36mINFO   [0m[Aug 23 17:19:13.530][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[33mWARNING[0m[Aug 23 17:19:13.531][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Aug 23 17:19:13.531][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Aug 23 17:19:13.572][operators.go: 185] Getting installplans for op serverless-operator.v1.29.0 (subs serverless-operator-v1-29-0-sub ns test) 
+[36mINFO   [0m[Aug 23 17:19:13.572][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 17:19:13.649][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 17:19:13.714][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[36mINFO   [0m[Aug 23 17:19:13.778][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 17:19:13.841][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-5334436cadf14d4498394530f0823fa1 
+[36mINFO   [0m[Aug 23 17:19:13.906][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-0d10fff9d0cba73baea526289053dfe8 
+[33mWARNING[0m[Aug 23 17:19:13.970][provider.go: 341] container: extract pod: 1cff878d500f954f67f09b890e56337f3e9339d4173ea419f613fc1012pp55q ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:19:13.970][provider.go: 357] container: extract pod: 1cff878d500f954f67f09b890e56337f3e9339d4173ea419f613fc1012pp55q ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 17:19:13.971][provider.go: 341] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:19:13.971][provider.go: 357] container: extract pod: 4230932c4888547d7ac309f091555b92b462f8c09d06272be928441096mntp6 ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Aug 23 17:19:13.971][provider.go: 341] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not ready yet. 
+[33mWARNING[0m[Aug 23 17:19:13.971][provider.go: 357] container: extract pod: 6500436e8d456436471ba355e123839691b6467ef32112389c01e846add7mbn ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Aug 23 17:19:13.972][operators.go: 130] Found 2 unique CSVs                          
+[36mINFO   [0m[Aug 23 17:19:13.972][operators.go: 132]   CSV: odf-csi-addons-operator.v4.13.0-rhodf 
+[36mINFO   [0m[Aug 23 17:19:13.972][operators.go: 132]   CSV: serverless-operator.v1.29.0           
+[36mINFO   [0m[Aug 23 17:19:14.009][operators.go: 185] Getting installplans for op odf-csi-addons-operator.v4.13.0-rhodf (subs odf-csi-addons-operator-v4-13-0-rhodf-sub ns test) 
+[36mINFO   [0m[Aug 23 17:19:14.048][operators.go: 185] Getting installplans for op serverless-operator.v1.29.0 (subs serverless-operator-v1-29-0-sub ns test) 
+[36mINFO   [0m[Aug 23 17:19:14.049][provider.go: 290] Operators found: 2                           
+[36mINFO   [0m[Aug 23 17:19:14.050][provider.go: 302] Completed the test environment build process in 3.51 seconds 
+[33mWARNING[0m[Aug 23 17:19:14.065][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1692811135[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-helm-version[0m [38;5;204m[common, affiliated-certification-helm-version, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:61[0m
+  Tiller pod is not found in all namespaces helm version is v3
+
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":null}
+[38;5;10m• [1.036 seconds][0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-container-is-certified[0m [38;5;204m[common, affiliated-certification-container-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:66[0m
+  [38;5;14m[SKIPPED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312 [38;5;243m@ 08/23/23 17:19:15.664[0m
+[38;5;14mS [SKIPPED] [0.552 seconds][0m
+[0maffiliated-certification [38;5;14m[1m[It] affiliated-certification-container-is-certified[0m [38;5;204m[common, affiliated-certification-container-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:66[0m
+
+  [38;5;14m[SKIPPED] Test skipped because there are no map[configuration.ContainerImageIdentifier]bool to test, please check under test labels[0m
+  [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312[0m [38;5;243m@ 08/23/23 17:19:15.664[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-operator-is-certified[0m [38;5;204m[common, affiliated-certification-operator-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:72[0m
+  [1mSTEP:[0m Verify operator as certified. Number of operators to check: 2 [38;5;243m@ 08/23/23 17:19:15.979[0m
+[36mINFO   [0m[Aug 23 17:19:16.590][suite.go: 151] Operator odf-csi-addons-operator.v4.13.0-rhodf (channel operator-sdk-run-bundle) not certified for OpenShift 4.13. 
+  Operator odf-csi-addons-operator.v4.13.0-rhodf (channel operator-sdk-run-bundle) failed to be certified for OpenShift 4.13
+[36mINFO   [0m[Aug 23 17:19:17.262][suite.go: 151] Operator serverless-operator.v1.29.0 (channel operator-sdk-run-bundle) not certified for OpenShift 4.13. 
+  Operator serverless-operator.v1.29.0 (channel operator-sdk-run-bundle) failed to be certified for OpenShift 4.13
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","odf-csi-addons-operator.v4.13.0-rhodf","4.13","operator-sdk-run-bundle"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","serverless-operator.v1.29.0","4.13","operator-sdk-run-bundle"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 08/23/23 17:19:17.265[0m
+[38;5;9m• [FAILED] [1.598 seconds][0m
+[0maffiliated-certification [38;5;9m[1m[It] affiliated-certification-operator-is-certified[0m [38;5;204m[common, affiliated-certification-operator-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:72[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","odf-csi-addons-operator.v4.13.0-rhodf","4.13","operator-sdk-run-bundle"]},{"ObjectType":"Operator","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Name","OCP Version","OCP Channel"],"ObjectFieldsValues":["Operator failed to be certified for OpenShift","test","serverless-operator.v1.29.0","4.13","operator-sdk-run-bundle"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 08/23/23 17:19:17.265[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-helmchart-is-certified[0m [38;5;204m[common, affiliated-certification-helmchart-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:77[0m
+  [38;5;14m[SKIPPED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312 [38;5;243m@ 08/23/23 17:19:17.493[0m
+[38;5;14mS [SKIPPED] [0.226 seconds][0m
+[0maffiliated-certification [38;5;14m[1m[It] affiliated-certification-helmchart-is-certified[0m [38;5;204m[common, affiliated-certification-helmchart-is-certified, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:77[0m
+
+  [38;5;14m[SKIPPED] Test skipped because there are no []*release.Release to test, please check under test labels[0m
+  [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:312[0m [38;5;243m@ 08/23/23 17:19:17.493[0m
+[38;5;243m------------------------------[0m
+[0maffiliated-certification [0m[1maffiliated-certification-container-is-certified-digest[0m [38;5;204m[common, affiliated-certification-container-is-certified-digest, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:82[0m
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 2373623440b5b1aaea228550674ee69fe926ac6f12e7adffb5592afe1b98fca ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: 31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  quay.io/operator-framework/opm:latest is not listed in certified containers
+  container: registry-grpc pod: a8c060444aa8e89dfbd90d61d6ec3900ab4d6634f6aa8067face1e6974b9065 ns: test digest not found in database, failing validation (repo=quay.io image=operator-framework/opm)
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  Container name = "" or repository = "" is missing, skipping this container to query
+  {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","2373623440b5b1aaea228550674ee69fe926ac6f12e7adffb5592afe1b98fca","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","a8c060444aa8e89dfbd90d61d6ec3900ab4d6634f6aa8067face1e6974b9065","registry-grpc","quay.io","operator-framework/opm"]}]}
+  [38;5;9m[FAILED][0m in [It] - /usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358 [38;5;243m@ 08/23/23 17:19:20.921[0m
+[38;5;9m• [FAILED] [3.427 seconds][0m
+[0maffiliated-certification [38;5;9m[1m[It] affiliated-certification-container-is-certified-digest[0m [38;5;204m[common, affiliated-certification-container-is-certified-digest, affiliated-certification][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/certification/suite.go:82[0m
+
+  [38;5;9m[FAILED] {"CompliantObjectsOut":null,"NonCompliantObjectsOut":[{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","2373623440b5b1aaea228550674ee69fe926ac6f12e7adffb5592afe1b98fca","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","31016e1b8d56e49130ef8a9610223142c0410b41c7e099d5fa08289afa99306","registry-grpc","quay.io","operator-framework/opm"]},{"ObjectType":"Container","ObjectFieldsKeys":["Reason For Non Compliance","Namespace","Pod Name","Container Name","Repository","Image Name"],"ObjectFieldsValues":["Digest not found in database","test","a8c060444aa8e89dfbd90d61d6ec3900ab4d6634f6aa8067face1e6974b9065","registry-grpc","quay.io","operator-framework/opm"]}]}[0m
+  [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/usr/tnf/tnf-src/pkg/testhelper/testhelper.go:358[0m [38;5;243m@ 08/23/23 17:19:20.921[0m
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[31mFATAL  [0m[Aug 23 17:24:21.866][phasecheck.go: 50] Timeout waiting for operator csv: serverless-operator.v1.29.0 ns: test to be ready 

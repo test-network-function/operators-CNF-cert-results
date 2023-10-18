@@ -1,0 +1,195 @@
+time="2023-09-25T08:37:41Z" level=info msg="Saving environment variables & parameters."
+time="2023-09-25T08:37:41Z" level=info msg="Environment: {Home:/root Kubeconfig:/usr/tnf/kubeconfig/config ConfigurationPath:/usr/tnf/config/tnf_config.yml NonIntrusiveOnly:false LogLevel:info OfflineDB:/usr/offline-db AllowPreflightInsecure:false PfltDockerconfig:/usr/tnf/dockercfg/config.json IncludeWebFilesInOutputFolder:false OmitArtifactsZipFile:false}"
+=== RUN   TestTest
+[36mINFO   [0m[Sep 25 08:37:41.432][suite_test.go: 98] Log level set to: info                       
+[36mINFO   [0m[Sep 25 08:37:41.434][suite_test.go: 140] TNF Version         : v4.3.4 ( 2037b43c9bccf6b00fe91797adfabcbeeeb5efdc ) 
+[36mINFO   [0m[Sep 25 08:37:41.434][suite_test.go: 141] Claim Format Version: v0.1.0                 
+[36mINFO   [0m[Sep 25 08:37:41.434][suite_test.go: 142] Ginkgo Version      : 2.11.0                 
+[36mINFO   [0m[Sep 25 08:37:41.434][suite_test.go: 143] Labels filter       : operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration 
+[36mINFO   [0m[Sep 25 08:37:41.434][clientsholder.go: 169] Creating k8s go-clients holder.              
+[36mINFO   [0m[Sep 25 08:37:41.886][utils.go: 51] Loading config from file: /usr/tnf/config/tnf_config.yml 
+[33mWARNING[0m[Sep 25 08:37:41.893][utils.go: 64] No namespace configured for the debug DaemonSet. Defaulting to namespace cnf-suite 
+[33mWARNING[0m[Sep 25 08:37:41.981][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 08:37:41.981][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 08:37:41.981][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 08:37:41.981][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 08:37:42.083][autodiscover_operators.go: 144] Found 3 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 08:37:42.083][autodiscover_operators.go: 146]  Subscriptions name: cloudbees-ci-v3-34-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:42.083][autodiscover_operators.go: 146]  Subscriptions name: ibm-metrics-operator-v2-11-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:42.083][autodiscover_operators.go: 146]  Subscriptions name: openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:42.160][autodiscover_operators.go: 121] Found 4 CSVs:                                
+[36mINFO   [0m[Sep 25 08:37:42.160][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 08:37:42.160][autodiscover_operators.go: 123]  CSV name: cloudbees-ci.v3.34.1 (ns: test)   
+[36mINFO   [0m[Sep 25 08:37:42.160][autodiscover_operators.go: 123]  CSV name: ibm-metrics-operator.v2.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:42.160][autodiscover_operators.go: 123]  CSV name: openshift-pipelines-operator-rh.v1.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:44.586][autodiscover_operators.go: 91] Found 3 CSVs:                                
+[36mINFO   [0m[Sep 25 08:37:44.586][autodiscover_operators.go: 93]  CSV name: cloudbees-ci.v3.34.1 (ns: test)   
+[36mINFO   [0m[Sep 25 08:37:44.587][autodiscover_operators.go: 93]  CSV name: ibm-metrics-operator.v2.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:44.587][autodiscover_operators.go: 93]  CSV name: openshift-pipelines-operator-rh.v1.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:44.623][autodiscover_operators.go: 144] Found 3 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 08:37:44.623][autodiscover_operators.go: 146]  Subscriptions name: cloudbees-ci-v3-34-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:44.623][autodiscover_operators.go: 146]  Subscriptions name: ibm-metrics-operator-v2-11-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:44.624][autodiscover_operators.go: 146]  Subscriptions name: openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:44.740][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 08:37:44.833][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 08:37:44.867][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 08:37:44.867][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 08:37:45.187][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 08:37:45.357][operators.go: 130] Found 4 unique CSVs                          
+[36mINFO   [0m[Sep 25 08:37:45.358][operators.go: 132]   CSV: ibm-metrics-operator.v2.11.1          
+[36mINFO   [0m[Sep 25 08:37:45.358][operators.go: 132]   CSV: openshift-pipelines-operator-rh.v1.11.1 
+[36mINFO   [0m[Sep 25 08:37:45.358][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 08:37:45.358][operators.go: 132]   CSV: cloudbees-ci.v3.34.1                  
+[36mINFO   [0m[Sep 25 08:37:45.397][operators.go: 185] Getting installplans for op cloudbees-ci.v3.34.1 (subs cloudbees-ci-v3-34-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:37:45.436][operators.go: 185] Getting installplans for op ibm-metrics-operator.v2.11.1 (subs ibm-metrics-operator-v2-11-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:37:45.478][operators.go: 185] Getting installplans for op openshift-pipelines-operator-rh.v1.11.1 (subs openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace ns test) 
+[33mWARNING[0m[Sep 25 08:37:45.480][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 08:37:45.481][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 08:37:45.484][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 08:37:45.588][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 08:37:45.657][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 08:37:45.719][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 08:37:45.781][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 08:37:45.841][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[31mERROR  [0m[Sep 25 08:37:45.901][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.901][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.902][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.902][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.902][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.902][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.904][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.904][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.905][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.905][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.905][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.905][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 08:37:45.909][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:37:45.909][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:37:45.909][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:37:45.910][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:37:45.910][provider.go: 341] container: extract pod: c6702fb3a79d752ee107e96ff552511d9dd71d4d2b68321740f71005598wwqq ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:37:45.910][provider.go: 357] container: extract pod: c6702fb3a79d752ee107e96ff552511d9dd71d4d2b68321740f71005598wwqq ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[31mERROR  [0m[Sep 25 08:37:45.910][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.910][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.911][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.911][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.911][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.911][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.912][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.912][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.912][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.912][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.912][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:37:45.913][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 08:37:45.914][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:37:45.914][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:37:45.914][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:37:45.914][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 08:37:45.915][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Sep 25 08:37:45.915][operators.go: 132]   CSV: ibm-metrics-operator.v2.11.1          
+[36mINFO   [0m[Sep 25 08:37:45.915][operators.go: 132]   CSV: openshift-pipelines-operator-rh.v1.11.1 
+[36mINFO   [0m[Sep 25 08:37:45.915][operators.go: 132]   CSV: cloudbees-ci.v3.34.1                  
+[36mINFO   [0m[Sep 25 08:37:45.947][operators.go: 185] Getting installplans for op cloudbees-ci.v3.34.1 (subs cloudbees-ci-v3-34-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:37:45.986][operators.go: 185] Getting installplans for op ibm-metrics-operator.v2.11.1 (subs ibm-metrics-operator-v2-11-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:37:46.021][operators.go: 185] Getting installplans for op openshift-pipelines-operator-rh.v1.11.1 (subs openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace ns test) 
+[36mINFO   [0m[Sep 25 08:37:46.021][provider.go: 290] Operators found: 3                           
+[36mINFO   [0m[Sep 25 08:37:46.022][provider.go: 302] Completed the test environment build process in 4.14 seconds 
+[33mWARNING[0m[Sep 25 08:37:57.293][autodiscover.go: 110] DEPRECATED: targetPodLabels config field is about to be obsolete. Please use the new "podsUnderTestLabels" field instead. 
+[33mWARNING[0m[Sep 25 08:37:57.293][autodiscover.go: 113] DEPRECATED: deprecated default operator label in use ( test-network-function.com/operator: ) is about to be obsolete. Please use the new "operatorsUnderTestLabels" field to specify operators labels instead. 
+[36mINFO   [0m[Sep 25 08:37:57.294][autodiscover.go: 143] parsed pods under test labels: [{LabelKey:test-network-function.com/generic LabelValue:target}] 
+[36mINFO   [0m[Sep 25 08:37:57.294][autodiscover.go: 144] parsed operators under test labels: [{LabelKey:test-network-function.com/operator LabelValue:}] 
+[36mINFO   [0m[Sep 25 08:37:57.440][autodiscover_operators.go: 144] Found 3 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 08:37:57.440][autodiscover_operators.go: 146]  Subscriptions name: cloudbees-ci-v3-34-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:57.440][autodiscover_operators.go: 146]  Subscriptions name: ibm-metrics-operator-v2-11-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:57.441][autodiscover_operators.go: 146]  Subscriptions name: openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:57.558][autodiscover_operators.go: 121] Found 4 CSVs:                                
+[36mINFO   [0m[Sep 25 08:37:57.558][autodiscover_operators.go: 123]  CSV name: packageserver (ns: openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 08:37:57.558][autodiscover_operators.go: 123]  CSV name: cloudbees-ci.v3.34.1 (ns: test)   
+[36mINFO   [0m[Sep 25 08:37:57.558][autodiscover_operators.go: 123]  CSV name: ibm-metrics-operator.v2.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:57.558][autodiscover_operators.go: 123]  CSV name: openshift-pipelines-operator-rh.v1.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:59.843][autodiscover_operators.go: 91] Found 3 CSVs:                                
+[36mINFO   [0m[Sep 25 08:37:59.843][autodiscover_operators.go: 93]  CSV name: cloudbees-ci.v3.34.1 (ns: test)   
+[36mINFO   [0m[Sep 25 08:37:59.843][autodiscover_operators.go: 93]  CSV name: ibm-metrics-operator.v2.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:59.843][autodiscover_operators.go: 93]  CSV name: openshift-pipelines-operator-rh.v1.11.1 (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:59.884][autodiscover_operators.go: 144] Found 3 subscriptions in the target namespaces 
+[36mINFO   [0m[Sep 25 08:37:59.884][autodiscover_operators.go: 146]  Subscriptions name: cloudbees-ci-v3-34-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:59.884][autodiscover_operators.go: 146]  Subscriptions name: ibm-metrics-operator-v2-11-1-sub (ns: test) 
+[36mINFO   [0m[Sep 25 08:37:59.884][autodiscover_operators.go: 146]  Subscriptions name: openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace (ns: test) 
+[36mINFO   [0m[Sep 25 08:38:00.000][autodiscover.go: 257] OpenShift Version found: 4.13.4              
+[33mWARNING[0m[Sep 25 08:38:00.108][autodiscover_podset.go: 87] Did not find any deployment in the configured namespaces [test] 
+[33mWARNING[0m[Sep 25 08:38:00.146][autodiscover_podset.go: 106] Did not find any statefulSet in ns=test      
+[33mWARNING[0m[Sep 25 08:38:00.146][autodiscover_podset.go: 120] Did not find any statefulset in the configured namespaces [test] 
+[36mINFO   [0m[Sep 25 08:38:00.495][autodiscover_podset.go: 138] Cannot find any deployed HorizontalPodAutoscaler 
+[36mINFO   [0m[Sep 25 08:38:00.698][operators.go: 130] Found 4 unique CSVs                          
+[36mINFO   [0m[Sep 25 08:38:00.699][operators.go: 132]   CSV: ibm-metrics-operator.v2.11.1          
+[36mINFO   [0m[Sep 25 08:38:00.699][operators.go: 132]   CSV: openshift-pipelines-operator-rh.v1.11.1 
+[36mINFO   [0m[Sep 25 08:38:00.699][operators.go: 132]   CSV: packageserver                         
+[36mINFO   [0m[Sep 25 08:38:00.699][operators.go: 132]   CSV: cloudbees-ci.v3.34.1                  
+[36mINFO   [0m[Sep 25 08:38:00.741][operators.go: 185] Getting installplans for op cloudbees-ci.v3.34.1 (subs cloudbees-ci-v3-34-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:38:00.775][operators.go: 185] Getting installplans for op ibm-metrics-operator.v2.11.1 (subs ibm-metrics-operator-v2-11-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:38:00.807][operators.go: 185] Getting installplans for op openshift-pipelines-operator-rh.v1.11.1 (subs openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace ns test) 
+[33mWARNING[0m[Sep 25 08:38:00.807][operators.go: 183] Subscription not found for CSV: packageserver (ns openshift-operator-lifecycle-manager) 
+[36mINFO   [0m[Sep 25 08:38:00.807][operators.go: 185] Getting installplans for op packageserver (subs  ns ) 
+[36mINFO   [0m[Sep 25 08:38:00.807][provider.go: 564] Node ip-10-0-138-139.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 08:38:00.881][provider.go: 564] Node ip-10-0-140-127.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 08:38:00.955][provider.go: 564] Node ip-10-0-144-53.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[36mINFO   [0m[Sep 25 08:38:01.028][provider.go: 564] Node ip-10-0-146-178.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 08:38:01.094][provider.go: 564] Node ip-10-0-171-112.ec2.internal - mc name: rendered-worker-2d2f3b16cfd49fa63f019201ad937fb4 
+[36mINFO   [0m[Sep 25 08:38:01.157][provider.go: 564] Node ip-10-0-173-119.ec2.internal - mc name: rendered-master-c13f40c1d9ca7958e3551ada049691f6 
+[33mWARNING[0m[Sep 25 08:38:01.223][provider.go: 341] container: manager pod: cloudbees-ci-controller-manager-5b85d6b57c-jpz6v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:38:01.223][provider.go: 341] container: manager pod: cloudbees-ci-controller-manager-5b85d6b57c-jpz6v ns: test is not ready yet. 
+[31mERROR  [0m[Sep 25 08:38:01.223][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.224][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.224][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.224][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.224][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.224][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.226][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.226][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.226][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.226][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.227][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.227][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 08:38:01.230][provider.go: 341] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:38:01.230][provider.go: 357] container: extract pod: 2f4b9d9982c8b335a892177c0a532db7b518f642fce9d67424764ae21fdvf6w ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:38:01.231][provider.go: 341] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:38:01.231][provider.go: 357] container: extract pod: b9f647540b1a1ce37709d746d3fe527552ab46b01468837f86475721e7jqh5v ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:38:01.231][provider.go: 341] container: extract pod: c6702fb3a79d752ee107e96ff552511d9dd71d4d2b68321740f71005598wwqq ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:38:01.231][provider.go: 357] container: extract pod: c6702fb3a79d752ee107e96ff552511d9dd71d4d2b68321740f71005598wwqq ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:38:01.232][provider.go: 341] container: manager pod: cloudbees-ci-controller-manager-5b85d6b57c-jpz6v ns: test is not ready yet. 
+[31mERROR  [0m[Sep 25 08:38:01.232][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.232][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.232][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.232][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.232][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.232][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.233][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.233][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.233][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.233][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.234][pods.go: 57] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[31mERROR  [0m[Sep 25 08:38:01.234][pods.go: 62] Could not decode networks-status annotation, error: could not unmarshal network-status annotation 
+[33mWARNING[0m[Sep 25 08:38:01.235][provider.go: 341] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:38:01.235][provider.go: 357] container: extract pod: d43224ecf8a90e2689f1b48690ce45a9c382a5ed2d2ce8b0d2fbba172a8xrtm ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[33mWARNING[0m[Sep 25 08:38:01.235][provider.go: 341] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not ready yet. 
+[33mWARNING[0m[Sep 25 08:38:01.235][provider.go: 357] container: extract pod: d4fe36668cbff5bf360eabb230ae7caeb430b86f4a6636c74f4314f7c0grbkk ns: test is not running (reason: terminated - Completed, restarts 0): some test cases might fail. 
+[36mINFO   [0m[Sep 25 08:38:01.236][operators.go: 130] Found 3 unique CSVs                          
+[36mINFO   [0m[Sep 25 08:38:01.236][operators.go: 132]   CSV: ibm-metrics-operator.v2.11.1          
+[36mINFO   [0m[Sep 25 08:38:01.236][operators.go: 132]   CSV: openshift-pipelines-operator-rh.v1.11.1 
+[36mINFO   [0m[Sep 25 08:38:01.236][operators.go: 132]   CSV: cloudbees-ci.v3.34.1                  
+[36mINFO   [0m[Sep 25 08:38:01.273][operators.go: 185] Getting installplans for op cloudbees-ci.v3.34.1 (subs cloudbees-ci-v3-34-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:38:01.311][operators.go: 185] Getting installplans for op ibm-metrics-operator.v2.11.1 (subs ibm-metrics-operator-v2-11-1-sub ns test) 
+[36mINFO   [0m[Sep 25 08:38:01.344][operators.go: 185] Getting installplans for op openshift-pipelines-operator-rh.v1.11.1 (subs openshift-pipelines-operator-rh-latest-redhat-operators-openshift-marketplace ns test) 
+[36mINFO   [0m[Sep 25 08:38:01.345][provider.go: 290] Operators found: 3                           
+[36mINFO   [0m[Sep 25 08:38:01.345][provider.go: 302] Completed the test environment build process in 4.13 seconds 
+[33mWARNING[0m[Sep 25 08:38:01.357][suite.go: 50] LabelFilter is set but 'preflight' tests are not targeted. Skipping the preflight tests. 
+Running Suite: CNF Certification Test Suite - /usr/tnf/cnf-certification-test
+=============================================================================
+Random Seed: [1m1695631061[0m
+
+Will run [1m82[0m of [1m87[0m specs
+[38;5;243m------------------------------[0m
+[0moperator [0m[1moperator-install-status-succeeded[0m [38;5;204m[common, operator-install-status-succeeded, operator][0m
+[38;5;243m/usr/tnf/tnf-src/cnf-certification-test/operator/suite.go:44[0m
+[36mINFO   [0m[Sep 25 08:38:02.412][phasecheck.go: 53] operator csv: cloudbees-ci.v3.34.1 ns: test is ready 
+[31mFATAL  [0m[Sep 25 08:43:03.072][phasecheck.go: 50] Timeout waiting for operator csv: openshift-pipelines-operator-rh.v1.11.1 ns: test to be ready 
