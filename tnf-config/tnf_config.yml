@@ -1,0 +1,6 @@
+targetNameSpaces:
+  - name: infoscale-operator-test
+targetPodLabels:
+  - prefix: test-network-function.com
+    name: generic
+    value: target

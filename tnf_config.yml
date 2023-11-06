@@ -1,0 +1,6 @@
+targetNameSpaces:
+  - name: $ns
+targetPodLabels:
+  - prefix: test-network-function.com
+    name: generic
+    value: target
