@@ -1,6 +1,6 @@
 targetNameSpaces:
   - name: $ns
-targetPodLabels:
-  - prefix: test-network-function.com
-    name: generic
-    value: target
+podsUnderTestLabels:
+  - "test-network-function.com/generic: target"
+operatorsUnderTestLabels:
+  - "test-network-function.com/operator: target" 

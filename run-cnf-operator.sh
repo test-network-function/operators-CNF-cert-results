@@ -27,7 +27,7 @@ do
   mkdir -p ./report-certified-october/$package_name
 
   # run tnf-container
-  ./run-tnf-container.sh -k /Users/yoza/Desktop/cnf-certification-test/.kube/config -t /Users/yoza/Desktop/cnf-certification-test/tnf-config -o /Users/yoza/Desktop/cnf-certification-test/report-certified-october/$package_name -c /Users/yoza/Desktop/cnf-certification-test/config.json -l "operator, access-control, networking, affiliated-certification, lifecycle, manageability, networking, observability, platform-alteration"
+  ./run-tnf-container.sh -k /Users/yoza/Desktop/cnf-certification-test/.kube/config -t /Users/yoza/Desktop/cnf-certification-test/tnf-config -o /Users/yoza/Desktop/cnf-certification-test/report-certified-october/$package_name -c /Users/yoza/Desktop/cnf-certification-test/config.json -l all
 
   # unlabel and uninstall the operator
   csv=$(oc get csv -n $ns | grep -v NAME | awk '{print $1}')
